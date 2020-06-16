@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rectbrandbg"
+    android:layout_marginLeft="5dp"
+    android:layout_marginBottom="25dp"
+    >
+
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="280dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgbrand"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+
+            <customfonts.MyTextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="loading"
+                android:textColor="@color/Tex"
+                android:textSize="@dimen/textlist" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colordevider">
+
+            </View>
+
+
+            <customfonts.MyTextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="loading"
+                android:textColor="@color/Tex"
+                android:textSize="@dimen/textlist" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colordevider">
+
+            </View>
+
+
+            <customfonts.MyTextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="loading"
+                android:textColor="@color/Tex"
+                android:textSize="@dimen/textlist" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colordevider">
+
+            </View>
+
+
+            <customfonts.MyTextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="loading"
+                android:textColor="@color/Tex"
+                android:textSize="@dimen/textlist" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colordevider">
+
+            </View>
+
+
+            <customfonts.MyTextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="loading"
+                android:textColor="@color/Tex"
+                android:textSize="@dimen/textlist" />
+
+
+            <customfonts.MyTextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="See More"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textlist"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:background="#00000000"
+
+                ></View>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

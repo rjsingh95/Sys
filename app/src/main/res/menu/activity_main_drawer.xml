@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/profile"
+            android:id="@+id/editprofile"
+
+            android:title="Edit Profile" />
+
+
+
+        <item
+            android:id="@+id/categories"
+            android:icon="@drawable/categories"
+            android:title="Categories" />
+
+
+
+        <item
+            android:icon="@drawable/book"
+            android:id="@+id/book"
+
+            android:title="My Books" />
+
+
+
+
+  <item
+            android:icon="@drawable/discount"
+            android:id="@+id/offers"
+
+            android:textSize="@dimen/menu_text"
+            android:layout_marginLeft="@dimen/menu_textpading"
+            android:title="Offers" />
+
+     <item
+         android:icon="@drawable/logout"
+         android:id="@+id/logout"
+         android:title="Logout" />
+    </group>
+
+
+</menu>
+

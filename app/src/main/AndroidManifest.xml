@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.supplyingyourservice.ranjeet.singh.sys">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        />
+
+    <application
+        android:name="com.supplyingyourservice.ranjeet.singh.sys.commonloc.commomloc"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.supplyingyourservice.ranjeet.singh.sys.SplashActivity"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ChatActivity" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.MainActivity" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ChatsFragment" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.placeorder" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_cateogories"/>
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_brands"/>
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.products_list"/>
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.Addshop"/>
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.WatchListFragment" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.editinfo" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ProductDetailActivity" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.Search_shops"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.SignIn" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.elastic.SearchActivity"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.commonloc.addcloc" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.shopdetails" />
+        <activity
+            android:name="com.supplyingyourservice.ranjeet.singh.sys.shop_map"
+            android:label="@string/title_activity_shop_map" />
+        <activity
+            android:name="com.supplyingyourservice.ranjeet.singh.sys.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.supplyingyourservice.ranjeet.singh.sys.MapsActivity2"
+            android:label="@string/title_activity_maps2"></activity>
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.placeorder_delivery" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.orders" />
+
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.news_detail" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.offers" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.shop_loc" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.shop_directions" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.product_confirmation" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.list_items" />
+
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.browser" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_type_category" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.book_search" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.bookstore" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.addabook" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.bookdetail" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.sell_book" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.all_books" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_products" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.getbooks" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.customer_loc" />
+        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.mybooks" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="9dp"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:background="@drawable/round_rectangle"
+   android:elevation="8dp"
+    android:id="@+id/card"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+        >
+
+
+    <LinearLayout
+        android:id="@+id/lin"
+
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:padding="10dp">
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/Images"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+
+                    android:layout_gravity="center" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <customfonts.MyTextView_Roboto_Regular
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:maxLines="2"
+                android:text="Product Title"
+                android:textColor="@color/Tex"
+                android:textSize="17dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+
+                android:orientation="horizontal">
+
+                <customfonts.MyTextView
+
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Price"
+                    android:textColor="@color/Tex"
+                    android:textSize="@dimen/text" />
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_below="@+id/quality"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/textSub"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    >
+
+
+
+                    <TextView
+                        android:id="@+id/quality"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        android:layout_gravity="end"
+
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:layout_marginBottom="10dp"
+
+
+                        android:paddingRight="7dp"
+                        android:paddingTop="2dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Discount"
+                        android:textColor="@color/textSub"
+                        android:textSize="14dp" />
+
+
+                </RelativeLayout>
+
+                <!--<LinearLayout-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:background="@drawable/discountbg"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!---->
+                <!---->
+                <!--&gt;-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/discount"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="30%"-->
+                <!--android:padding="2dp"-->
+                <!--android:textColor="#fff"-->
+                <!--android:gravity="center"-->
+                <!--android:textSize="12dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:background="@drawable/discountbg"-->
+                <!--/>-->
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linear"
+    android:visibility="visible"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/addressimage"
+        android:src="@drawable/agenda"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/address"
+
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/addressimage"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="left"
+        android:background="@color/cattextcolour"
+        android:padding="5dp"
+        android:text="add" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="#f2f3f4"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="end"
+
+        android:padding="5dp"
+        android:text="add" />
+
+</RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/card"
+
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_marginEnd="15dp"
+    android:id="@+id/cardnav"
+    android:visibility="gone"
+    android:layout_marginStart="15dp"
+    app:cardCornerRadius="3dp"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:padding="6dp"
+            android:orientation="horizontal"
+
+
+android:gravity="center"
+android:weightSum="3"
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+android:id="@+id/call"
+android:layout_weight="1"
+                android:src="@drawable/call"
+              android:padding="3dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:layout_weight="1"
+                android:id="@+id/location"
+                android:src="@drawable/locatio"
+                android:padding="3dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:id="@+id/navig"
+
+                android:layout_weight="1"
+                android:src="@drawable/directions"
+                />
+
+
+
+        </LinearLayout>
+</androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

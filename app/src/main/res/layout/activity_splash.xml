@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/imagelogo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo" />
+
+
+    <customfonts.MyTextView_Roboto_Bold
+        android:layout_alignParentBottom="true"
+        android:id="@+id/welcome_text"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:text="The Local Online Store"
+        android:textSize="20dp"
+        android:textColor="@color/textSub"
+        android:layout_marginBottom="155dp"/>
+
+</RelativeLayout>

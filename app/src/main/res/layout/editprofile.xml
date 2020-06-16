@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:background="#F3F3F3"
+            android:padding="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+
+
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="#c1c2c3"
+                    android:alpha=".90">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_photo"
+                        android:layout_width="105dp"
+                        android:layout_height="103dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="52dp"
+                        android:src="@drawable/default_avatar"
+                        app:civ_border_color="@color/White"
+                        app:civ_border_width="2dp" />
+
+                    <customfonts.MyTextView_Roboto_Medium
+                        android:id="@+id/changeProfilePhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_photo"
+                        android:layout_centerHorizontal="true"
+                        android:text="Add a Selfie"
+                        android:textColor="@color/wallet_bright_foreground_holo_dark"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- username section -->
+            <RelativeLayout
+                android:id="@+id/relLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card"
+                android:layout_marginHorizontal="10dp"
+
+                android:layout_marginTop="20dp"
+
+                android:elevation="4dp">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:background="@color/white"
+
+    android:layout_height="wrap_content">
+                <customfonts.MyTextView_Roboto_Medium
+                    android:id="@+id/tv"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="15dp"
+                    android:textSize="15dp"
+
+                    android:layout_marginTop="10dp"
+                    android:text="Username"
+                    android:textColor="@color/transparentBlack" />
+
+
+                <customfonts.EditText_Roboto_Regular
+                    android:id="@+id/username"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+
+                    android:drawablePadding="8dp"
+
+
+                    android:backgroundTint="@color/textSub"
+
+                    android:layout_marginHorizontal="10dp"
+                    android:drawingCacheQuality="low"
+                    android:layout_marginTop="25dp"
+
+
+                    android:drawableLeft="@drawable/pass"
+
+                    android:hint="username"
+                    android:inputType="textNoSuggestions" />
+</androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+
+            <!-- display_name section -->
+            <RelativeLayout
+                android:id="@+id/relLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout1"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+               >
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+                <customfonts.MyTextView_Roboto_Medium
+                    android:id="@+id/tv2"
+                    android:layout_width="308dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="12dp"
+                    android:text="Name"
+                    android:textSize="15dp"
+
+                    android:textColor="@color/transparentBlack" />
+
+                <customfonts.EditText_Roboto_Regular
+                    android:id="@+id/display_name"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+
+
+
+                    android:layout_marginHorizontal="12dp"
+                     android:backgroundTint="@color/textSub"
+                    android:drawingCacheQuality="low"
+
+
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="5dp"
+
+
+                    android:drawableLeft="@drawable/user"
+                    android:drawablePadding="8dp"
+                    android:hint="display name"
+                    android:inputType="textNoSuggestions" />
+</androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout2"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content">
+                    <customfonts.MyTextView_Roboto_Medium
+                        android:id="@+id/addresstv"
+                        android:layout_width="308dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="12dp"
+                        android:text="Address"
+                        android:textSize="15dp"
+
+                        android:textColor="@color/transparentBlack" />
+
+                    <customfonts.EditText_Roboto_Regular
+                        android:id="@+id/address"
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+
+
+
+                        android:layout_marginHorizontal="12dp"
+                        android:backgroundTint="@color/textSub"
+
+
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="5dp"
+
+
+                       android:drawableLeft="@drawable/agenda"
+                        android:drawablePadding="8dp"
+                        android:hint="Add Address"
+                        android:inputType="textNoSuggestions" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <!-- website section -->
+            <RelativeLayout
+                android:id="@+id/relLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayoute"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+               >
+ <androidx.cardview.widget.CardView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+                <customfonts.MyTextView_Roboto_Medium
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparentBlack"
+                    android:id="@+id/tv3"
+                    android:layout_alignParentStart="true"
+                    android:textSize="15dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="12dp"
+                    android:text="About You (For Delivery)" />
+
+                <customfonts.EditText_Roboto_Regular
+                    android:id="@+id/details"
+                    android:layout_below="@id/tv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/detail2"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="10dp"
+                    android:drawingCacheQuality="low"
+                    android:drawablePadding="5dp"
+                    android:backgroundTint="@color/textSub"
+
+
+
+                    android:hint="Tell us About you"
+                    android:inputType="textNoSuggestions"
+                    android:maxLines="2" />
+ </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <!-- description section -->
+            <RelativeLayout
+                android:id="@+id/relLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout3"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content">
+                <customfonts.MyTextView_Roboto_Medium
+                    android:layout_width="343dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparentBlack"
+                    android:textSize="15dp"
+
+                    android:id="@+id/tv4"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="12dp"
+                    android:text="E mail" />
+
+
+                <customfonts.MyTextView_Roboto_Medium
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+
+                    android:layout_marginStart="12dp"
+                    android:drawingCacheQuality="low"
+                    android:layout_below="@id/tv4"
+                    android:drawableLeft="@drawable/email"
+                    android:backgroundTint="@color/textSub"
+
+                    android:layout_marginBottom="8dp"
+
+                    android:drawablePadding="8dp"
+
+                    android:hint="Email"
+                    android:inputType="textNoSuggestions" />
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+            <!-- email section -->
+
+
+            <!-- phone number section -->
+            <RelativeLayout
+                android:id="@+id/relLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout4"
+                android:layout_marginTop="15dp"
+             android:layout_marginHorizontal="10dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content">
+
+                <customfonts.MyTextView_Roboto_Medium
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/transparentBlack"
+                    android:id="@+id/tv5"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="15dp"
+android:layout_marginTop="5dp"
+                    android:layout_marginStart="12dp"
+                    android:text="Phone Number" />
+
+
+                <customfonts.EditText_Roboto_Meidum
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:layout_below="@+id/tv5"
+                    android:layout_marginTop="25dp"
+
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/textSub"
+                    android:drawingCacheQuality="low"
+
+                    android:drawableLeft="@drawable/mobile"
+                    android:hint="Phone Number"
+                   />
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout6"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="#3a4242"
+                android:alpha=".90"
+                >
+
+                <ImageView
+                    android:id="@+id/locationpin"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/locationpin"
+                    android:visibility="visible" />
+
+                <customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/locationpin"
+
+
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="14dp"
+                    android:paddingTop="10dp"
+                    android:text="Save your permanent location"
+                    android:textColor="@color/White"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayout7"
+                android:alpha=".95"
+
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="20dp">
+
+                <customfonts.MyTextView
+                    android:id="@+id/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3a4242"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:text="Save"
+                    android:textColor="@color/White"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

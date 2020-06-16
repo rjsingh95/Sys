@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#f8f8f8">
+
+<ProgressBar
+    android:layout_width="match_parent"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/progress"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none"
+        android:layout_below="@+id/progress"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+            <!--**********Apply coupon and gift wrap**********-->
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rect"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+
+                >
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="9dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:src="@drawable/couponstag"
+
+                        />
+
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:text="Apply Coupon"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text" />
+
+
+
+                </LinearLayout>-
+
+                <View
+
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colordevider">
+
+                </View>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/linear1"
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rect"
+                android:layout_margin="16dp"
+                >
+
+                <!--******bag total********-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/bagtotal"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textColor="@color/textSub"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="left"
+                        />
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/total"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1600 Rs"
+                        android:textColor="@color/Tex"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="right"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colordevider"/>
+
+
+                <!--******bag total********-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <customfonts.MyTextView
+                            android:layout_weight="1"
+                            android:id="@+id/bagdiscount"
+                            android:textSize="@dimen/text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Discount"
+                            android:textColor="@color/textSub"
+                            android:background="#0000"
+                            android:layout_marginLeft="16dp"
+
+                            android:gravity="left"
+                            />
+
+                        <customfonts.MyTextView
+
+                            android:id="@+id/d1"
+                            android:textSize="@dimen/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Tex"
+
+                            android:background="#0000"
+
+                            android:gravity="right"
+                            />
+                        <customfonts.MyTextView
+
+                            android:id="@+id/tod"
+                            android:textSize="@dimen/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" - "
+                            android:textColor="@color/Tex"
+                            android:background="#0000"
+
+                            android:gravity="right"
+                            />
+                        <customfonts.MyTextView
+                            android:id="@+id/d2"
+                            android:textSize="@dimen/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textColor="@color/Tex"
+                            android:background="#0000"
+
+                            android:gravity="right"
+                            />
+                        <customfonts.MyTextView
+                            android:id="@+id/discount"
+                            android:textSize="@dimen/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" %    "
+
+                            android:textColor="@color/Tex"
+                            android:background="#0000"
+
+                            android:gravity="right"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colordevider"/>
+
+                <!--******sub total********-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+
+                        android:textSize="@dimen/text"
+                        android:id="@+id/pricetype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Total"
+                        android:textColor="@color/textSub"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="left"
+                        />
+
+
+                    <customfonts.MyTextView
+                        android:id="@+id/tvp1"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent"
+
+                        android:background="#0000"
+                        android:gravity="right"
+                        android:padding="16dp"
+                        android:text=""
+                        android:textColor="@color/Tex"
+                        android:textSize="@dimen/text" />
+                    <customfonts.MyTextView
+                        android:id="@+id/tv2"
+
+                        android:textSize="@dimen/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="to"
+                        android:textColor="@color/Tex"
+                        android:layout_marginTop="18dp"
+
+                        android:background="#0000"
+                        android:gravity="right"
+                        />
+                    <customfonts.MyTextView
+                        android:id="@+id/tvp3"
+
+                        android:textSize="@dimen/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/Tex"
+                        android:background="#0000"
+                        android:padding="8dp"
+                        android:gravity="right"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colordevider"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/linyourprice"
+                    >
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/yorprice"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your offered Price"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="left"
+                        />
+
+
+                    <EditText
+                        android:layout_weight="1"
+                        android:id="@+id/yourprice"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:inputType="number"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:background="@color/blue1"
+                        android:padding="16dp"
+                        android:gravity="right"
+                        />
+                </LinearLayout>
+                <customfonts.MyTextView
+                    android:layout_weight="1"
+                    android:id="@+id/notrange"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="not in range !"
+                    android:textColor="@color/red"
+                    android:background="#0000"
+                    android:padding="2dp"
+                    android:gravity="right"
+                    android:layout_marginRight="50dp"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colordevider"/>
+
+
+
+                <!--******coupon discount********-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/coupondiscount"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Coupon Discount"
+                        android:textColor="#5983f0"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="left"
+                        />
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/cdiscount"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="None"
+                        android:textColor="#5983f0"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="right"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colordevider"/>
+
+                <!--******sub total********-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/delivery"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Shipping"
+                        android:textColor="@color/textSub"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="left"
+                        />
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/deliveryfree"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:textColor="#5983f0"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="right"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colordevider"/>
+
+                <!--****** total********-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lin"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/totalpayable"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/totalpayable"
+                        android:textColor="@color/textSub"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="left"
+                        />
+
+
+                    <customfonts.MyTextView
+                        android:layout_weight="1"
+                        android:id="@+id/payable"
+                        android:textSize="@dimen/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/Tex"
+                        android:background="#0000"
+                        android:padding="16dp"
+                        android:gravity="right"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/linear2"
+
+                android:layout_width="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+
+                android:layout_alignParentBottom="true"
+                >
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/placeorder"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/text"
+                    android:background="@color/colorAccent"
+                      android:paddingLeft="25dp"
+                    android:id="@+id/deliver"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="25dp"
+                    android:gravity="center"
+                    android:layout_gravity="right"
+                    />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginStart="0dp" />
+
+
+</RelativeLayout>

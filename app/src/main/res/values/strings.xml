@@ -1,0 +1,28 @@
+<resources>
+    <string name="signup"><b><u>Sign up Now</u></b></string>
+    <string name="loading">Loading…</string>
+    <string name="signin"><u><b>Sign in</b></u></string>
+    <string name="tandc"><u>terms &amp; conditions</u></string>
+    <string name="app_name">SYS</string>
+    <string name="code"><u>code</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_shop_map">Map</string>
+    <string name="totalpayable"><b>Total Payable</b></string>
+    <string name="totalpayableamount"><b>940 Rs</b></string>
+    <string name="placeorder"><b>PLACE ORDER</b></string>
+
+    <string name="facebook_app_id">233580477177836</string>
+    <string name="fb_login_protocol_scheme">fb233580477177836</string>
+
+    //intent extras and bundle
+    <string name="arg_post_id">arg_post_id</string>
+    <string name="click">clicked</string>
+    <string name="node_elasticsearch">elasticsearch</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="shop_details">Shop Details</string>
+    <string name="promise_given_by_shop_keeper">promise given by shop keeper</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="brackat">BRACKAT SAMPLE</string>
+
+</resources>

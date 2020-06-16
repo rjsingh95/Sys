@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/rect"
+        android:orientation="vertical">
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thanks for Choosing Us!"
+            android:textSize="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/Tex"/>
+        <View
+
+            android:layout_width="250dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/dash_line"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+
+            android:src="@drawable/loading"/>
+
+        <View
+
+            android:layout_width="250dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dash_line"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="05dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="horizontal">
+
+                <customfonts.MyTextView
+                    android:layout_width="160dp"
+
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/title"
+                    android:textSize="16dp"
+                    android:textColor="@color/textSub"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_gravity="left">
+
+
+                <customfonts.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="Shop Name"
+                    android:id="@+id/shopname"
+                    android:textColor="@color/textSub"
+                    android:textSize="15dp"
+                    android:textStyle="italic"
+                    />
+
+
+            </LinearLayout>
+            <View
+
+                android:layout_width="250dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dash_line"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:paddingTop="10dp"
+
+                android:orientation="horizontal">
+
+                <customfonts.MyTextView
+                    android:layout_weight="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="CALL"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:id="@+id/call"
+                    android:background="@drawable/round_rectangle_blue"
+                    android:textSize="@dimen/text"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/line"
+        android:layout_alignRight="@+id/lin1"
+        android:layout_alignEnd="@+id/lin1"
+        android:layout_alignLeft="@+id/lin1"
+        android:layout_alignStart="@+id/lin1"
+        android:layout_below="@+id/lin1" />
+
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="160dp"
+    android:background="@drawable/rect"
+    android:layout_height="wrap_content"
+    android:elevation="16dp"
+    android:layout_margin="6dp"
+
+    card_view:cardCornerRadius="6dp">
+
+
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:layout_marginRight="4dp"
+            >
+            <ImageView
+                android:id="@+id/fav1"
+                android:layout_weight="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/f0"
+                android:layout_gravity="left"
+                />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/fav2"
+                android:layout_weight="5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/f4"
+                android:layout_gravity="left"
+                />
+
+            <!--<ImageView-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/spinning_wheel_image"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="@drawable/fav6"-->
+            <!--android:layout_gravity="left"-->
+            <!--/>-->
+
+            <!--<ImageView-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/spinning_wheel_image2"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="@drawable/fav5"-->
+            <!--android:layout_gravity="left"-->
+            <!--/>-->
+            <!--<ImageView-->
+            <!--android:id="@+id/fav1"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="@drawable/f0"-->
+            <!--android:layout_gravity="left"-->
+            <!--/>-->
+        </RelativeLayout>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/Image"
+                android:layout_width="240px"
+                android:layout_marginTop="5dp"
+                android:layout_height="320px"
+                android:layout_gravity="center"
+                android:src="@drawable/loading" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#99e2e2e2"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            >
+
+        </View>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            >
+
+            <customfonts.MyTextView
+
+                android:id="@+id/title"
+                android:maxLines="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book Title"
+                android:textSize="16dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/Tex"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+
+                >
+
+                <customfonts.MyTextView
+
+                    android:id="@+id/author"
+                    android:maxLines="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book Title"
+                    android:textSize="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:textColor="@color/grey"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+

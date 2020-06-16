@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProductDetailActivity"
+    android:background="#f2f3f4">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+
+
+            <!--*********product name*********-->
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_below="@+id/Image"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:background="@color/White"
+
+                >
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product Title"
+                        android:id="@+id/product_title"
+                        android:maxLines="3"
+                        android:gravity="center"
+                        android:textColor="@color/Tex"
+                        android:textSize="19dp"
+                        android:layout_marginLeft="16dp"
+                        />
+                    <customfonts.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product Title"
+                        android:id="@+id/author"
+                        android:maxLines="2"
+                        android:gravity="center"
+                        android:textColor="@color/textSub"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="16dp"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--*********image*********-->
+
+            <FrameLayout
+                android:visibility="visible"
+                android:id="@+id/Image"
+
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/White"
+
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+
+
+                    android:id="@+id/pslider"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+
+                    android:layout_height="match_parent"
+                   android:src="@drawable/notebook"
+                    android:background="#fff"
+
+
+                    >
+                </ImageView>
+
+            </FrameLayout>
+
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_below="@+id/linear1"
+    android:layout_height="wrap_content">
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:elevation="5dp"
+    android:id="@+id/sell"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+
+    android:text="SEll"
+
+    android:drawablePadding="8dp"
+    android:background="@drawable/round_rectangle"
+    android:textColor="@color/textSub"
+    android:textSize="12dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:elevation="5dp"
+        android:id="@+id/buy"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+
+        android:text="BUY"
+        android:layout_toLeftOf="@+id/sell"
+
+        android:drawablePadding="8dp"
+        android:background="@drawable/round_rectangle"
+        android:textColor="@color/textSub"
+        android:textSize="12dp"/>
+
+</RelativeLayout>
+
+
+
+            <!--************Item details**************-->
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+    <View
+
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/strok"
+        android:id="@+id/div0"
+
+
+        ></View>
+
+    <LinearLayout
+        android:layout_weight="2.6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        ></LinearLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:elevation="8dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/rel"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/card"
+                android:alpha=".8"
+                android:background="@color/transparentBlack"
+                android:visibility="visible"
+
+
+                android:layout_height="match_parent">
+            </RelativeLayout>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/productsrv"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                />
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/photo_view"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="100dp"
+                android:scaleType="fitCenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

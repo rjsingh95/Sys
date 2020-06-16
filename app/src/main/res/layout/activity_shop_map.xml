@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/cardsearch"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <fragment
+                    android:id="@+id/place_autocomplete_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    />
+            </androidx.cardview.widget.CardView>
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/card"
+                />
+
+        </FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:id="@+id/card"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:paddingVertical="7dp"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/right"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/right_double"
+                    android:layout_marginEnd="18dp" />
+
+                <Switch
+                    android:id="@+id/mapswitch"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginVertical="5dp"
+                    android:id="@+id/left"
+                    android:alpha=".7"
+                    android:src="@drawable/right_left" />
+
+                <customfonts.MyTextView_Roboto_Black
+                    android:id="@+id/tvleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:layout_marginStart="79dp"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:text="SAVE" />
+
+                <customfonts.MyTextView_Roboto_Black
+                    android:id="@+id/tvright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:padding="5dp"
+                    android:layout_marginEnd="80dp"
+                    android:text="SET" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+

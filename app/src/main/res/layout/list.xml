@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rect"
+    android:layout_marginLeft="5dp"
+    >
+
+      <LinearLayout
+          android:layout_width="160dp"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="end"
+              android:orientation="horizontal"
+
+              android:layout_marginTop="16dp"
+              >
+                <LinearLayout
+
+                    android:layout_width="25dp"
+                    android:paddingEnd="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="4dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/fav1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_gravity="left"
+
+                        android:src="@drawable/f0" />
+
+
+              <ImageView
+                  android:visibility="gone"
+              android:id="@+id/fav2"
+              android:layout_weight="5"
+              android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:src="@drawable/f4"
+              android:layout_gravity="left"
+              />
+                </LinearLayout>
+
+              <LinearLayout
+                  android:layout_weight="1"
+                  android:visibility="gone"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+
+                 android:gravity="end"
+                  android:layout_marginRight="16dp"
+                  >
+
+              <customfonts.MyTextView
+                 android:id="@+id/discount"
+                  android:background="@drawable/discountbg"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="discount"
+                  android:visibility="gone"
+                  android:padding="1dp"
+                  android:alpha=".85"
+                  android:textColor="#fff"
+
+                android:gravity="center"
+                  android:textSize="12dp"
+                  />
+              </LinearLayout>
+          </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+          <ImageView
+              android:id="@+id/Image"
+        android:layout_width="180px"
+        android:layout_height="230px"
+        android:src="@drawable/loading"
+        android:layout_gravity="center"
+        />
+        </FrameLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="#99e2e2e2"
+              android:layout_marginRight="16dp"
+              android:layout_marginLeft="16dp"
+              android:layout_marginTop="10dp"
+              >
+
+          </View>
+
+
+          <LinearLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingTop="11dp"
+              >
+
+              <customfonts.MyTextView
+
+                  android:id="@+id/title"
+                  android:maxLines="2"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Product Title"
+                  android:textSize="15dp"
+                  android:layout_marginStart="10dp"
+                  android:layout_marginEnd="10dp"
+                  android:layout_marginBottom="6dp"
+                  android:textColor="@color/Tex"
+                  />
+
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center"
+                  android:layout_gravity="center"
+                  android:layout_marginBottom="15dp"
+                  android:padding="4dp"
+                  >
+
+                  <com.willy.ratingbar.ScaleRatingBar
+                      xmlns:app="http://schemas.android.com/apk/res-auto"
+                      android:id="@+id/ratingbar"
+                      android:layout_width="139dp"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      app:srb_clearRatingEnabled="false"
+
+                      app:srb_drawableEmpty="@drawable/start_empty"
+                      app:srb_drawableFilled="@drawable/star_filled"
+                      app:srb_isIndicator="false"
+                      app:srb_minimumStars="0"
+                      app:srb_numStars="5"
+                      app:srb_clickable="false"
+app:srb_scrollable="false"
+                      android:layout_marginTop="3dp"
+
+                      app:srb_starHeight="13dp"
+                      app:srb_starPadding="4dp"
+                      app:srb_starWidth="13dp"
+                      app:srb_stepSize="0.5">
+
+                  </com.willy.ratingbar.ScaleRatingBar>
+
+
+                  <androidx.cardview.widget.CardView
+                      android:layout_width="match_parent"
+                      android:alpha=".1"
+
+
+                      android:layout_alignTop="@+id/ratingbar"
+                      android:layout_alignBottom="@+id/ratingbar"
+
+                      android:layout_height="wrap_content">
+
+                  </androidx.cardview.widget.CardView>
+              </RelativeLayout>
+
+
+          </LinearLayout>
+
+
+
+
+
+      </LinearLayout>
+
+
+</LinearLayout>

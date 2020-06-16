@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f4f4f4"
+    tools:context=".Search_shops">
+    <LinearLayout
+
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="4dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+
+        android:paddingTop="8dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:elevation="8dp"
+            android:id="@+id/card"
+            android:layout_height="wrap_content">
+            <EditText
+                android:elevation="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:id="@+id/searchBar"
+               />
+            <!--********story by and refine*********-->
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_height="wrap_content">
+
+            <com.supplyingyourservice.ranjeet.singh.sys.ExpandableHeightGridView
+                android:id="@+id/gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin"
+                android:layout_margin="5dp"
+                android:background="#f2f3f4"
+                android:horizontalSpacing="5dp"
+                android:isScrollContainer="false"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp"
+                android:visibility="visible" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:elevation="8dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/rel"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/card2"
+                android:alpha=".8"
+                android:background="@color/transparentBlack"
+                android:visibility="visible"
+
+
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/enter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:elevation="8dp"
+                android:paddingVertical="8dp"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/toolbar2"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+
+
+                >
+
+                <EditText
+                    android:id="@+id/showbrand"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="48dp"
+                    android:padding="8dp"
+
+                    android:background="@drawable/round_rectangle_less"
+
+                    android:hint="Search categories.."
+                    android:textColor="@color/Tex"
+                    android:textSize="20dp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/enter"
+                android:layout_height="match_parent"
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/productsrv"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                />
+
+
+
+        </RelativeLayout>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/addbook"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_rectangle"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Not There? Add A Book" />
+
+
+</RelativeLayout>

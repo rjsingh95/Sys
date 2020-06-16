@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f2f2f2"
+    >
+
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_order">
+
+    </include>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listview"
+        android:layout_marginTop="6dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:layout_below="@+id/toolbar"
+        android:divider="#00000000"
+        android:scrollbars="none"
+        android:paddingBottom="64dp"
+
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:id="@+id/rel"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp" >
+
+        <ImageView
+            android:alpha=".4"
+            android:layout_width="197dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/reck"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/megaphone" />
+        <customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/textSub"
+            android:id="@+id/head"
+
+            android:text="Get Exclusive Offers from subscribed sellers.\nBy subscribing to sellers using there BRACKAT registered phone number"
+
+            android:layout_below="@+id/reck"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true" />
+
+
+
+
+    <include layout="@layout/layout_bottom_navigation_view"/>
+
+
+
+
+
+</RelativeLayout>

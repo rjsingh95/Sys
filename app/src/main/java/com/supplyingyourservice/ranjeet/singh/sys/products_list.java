@@ -1,0 +1,250 @@
+package com.supplyingyourservice.ranjeet.singh.sys;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+import com.willy.ratingbar.ScaleRatingBar;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class products_list extends AppCompatActivity {
+    String key = null;
+    String value = null;
+    private single_text_adapter baseAdapter1;
+    private RecyclerView rv2;
+    private String mpost_key;
+    private DatabaseReference mref;
+    List<aproduct> list = new ArrayList<>();
+    private DatabaseReference dref;
+    private ProgressBar progressrv;
+
+    boolean gaya =false;
+
+    private FirebaseAuth mAuth;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(com.supplyingyourservice.ranjeet.singh.sys.R.layout.products_list);
+
+
+        EditText search = (EditText) findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.showbrand);
+        search.setVisibility(View.GONE);
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+        rv2 = (RecyclerView) findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.recyclerView);
+        mref = FirebaseDatabase.getInstance().getReference().child("products");
+
+        mpost_key = getIntent().getStringExtra("product_name");
+
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(products_list.this, LinearLayoutManager.VERTICAL, false);
+        rv2.setLayoutManager(mLayoutManager);
+        mAuth= FirebaseAuth.getInstance();
+
+
+
+        progressrv=(ProgressBar)findViewById(R.id.progress);
+        Query query = mref.orderByChild("c_b")
+                .startAt(mpost_key.toLowerCase())
+                .endAt(mpost_key.toLowerCase() + "\uf8ff");
+
+        FirebaseRecyclerAdapter<aproduct, FriendsViewHolder> adapter = new FirebaseRecyclerAdapter<aproduct,FriendsViewHolder>(
+                aproduct.class, com.supplyingyourservice.ranjeet.singh.sys.R.layout.listview_productlist,FriendsViewHolder.class,query)
+        {
+            @Override
+            protected void populateViewHolder(final FriendsViewHolder viewHolder, final aproduct model, int position) {
+
+                final String post_key = getRef(position).getKey();
+
+                final Handler handler = new Handler();
+
+
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(getItemCount()==0  )
+                        {
+
+                            progressrv.setVisibility(View.GONE);
+                        }
+                        // Do something after 5s = 5000ms
+
+                    }
+                }, 2500);
+                if(post_key!=null){
+                    gaya=true;
+                    progressrv.setVisibility(View.GONE);
+                }
+
+                dref = FirebaseDatabase.getInstance().getReference();
+                viewHolder.price.setText("MRP "+model.getPrice());
+                viewHolder.ratingbar.setRating(model.getRating()/2);
+                dref.child("Likes").child(mAuth.getCurrentUser().getUid()).child(post_key);
+                dref.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.hasChild("like")) {
+                            viewHolder.fav2.setVisibility(View.VISIBLE);
+                            viewHolder.fav1.setVisibility(View.GONE);
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+                viewHolder.mSmallBang = SmallBang.attach2Window(products_list.this);
+
+
+                viewHolder.fav1.setOnClickListener(new View.OnClickListener() {
+                    public DatabaseReference dref;
+
+                    @Override
+                    public void onClick(final View v) {
+
+                        dref = FirebaseDatabase.getInstance().getReference();
+                        dref.child("Likes").child(mAuth.getCurrentUser().getUid()).child(post_key).child("like").setValue("set").addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                viewHolder.fav2.setVisibility(View.VISIBLE);
+                                viewHolder.fav1.setVisibility(View.GONE);
+                                like(v);
+                            }
+                        });
+
+
+                    }
+
+                    public void like(View view) {
+                        viewHolder.fav2.setImageResource(com.supplyingyourservice.ranjeet.singh.sys.R.drawable.f4);
+                        viewHolder.mSmallBang.bang(view);
+                        viewHolder.mSmallBang.setmListener(new SmallBangListener() {
+                            @Override
+                            public void onAnimationStart() {
+
+                            }
+
+                            @Override
+                            public void onAnimationEnd() {
+
+                            }
+
+
+                        });
+                    }
+
+                });
+
+                viewHolder.fav2.setOnClickListener(new View.OnClickListener() {
+                    DatabaseReference dref;
+
+                    @Override
+                    public void onClick(View v) {
+
+                        dref = FirebaseDatabase.getInstance().getReference();
+                        dref.child("Likes").child(mAuth.getCurrentUser().getUid()).child(post_key).child("like").removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                viewHolder.fav2.setVisibility(View.GONE);
+                                viewHolder.fav1.setVisibility(View.VISIBLE);
+
+                            }
+                        });
+
+
+                    }
+                });
+
+
+                viewHolder.setTitle(model.getTitle());
+                viewHolder.setImage(model.getProductdp(), getApplicationContext());
+
+                viewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //Toast.makeText(MainActivity.this ,post_key,"product clicked",Toast.LENGTH_SHORT).show();
+                        Intent productdetailsintent = new Intent(products_list.this, ProductDetailActivity.class);
+                        productdetailsintent.putExtra("product_id", post_key);
+                        startActivity(productdetailsintent);
+                    }
+                });
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+
+
+
+
+
+    rv2.setAdapter(adapter);
+
+            }
+
+        public static class FriendsViewHolder extends RecyclerView.ViewHolder {
+
+            private final TextView price,discount;
+            private final ScaleRatingBar ratingbar;
+            private ImageView fav1, fav2 ;
+            View mView;
+            public SmallBang mSmallBang;
+
+            public FriendsViewHolder(View itemView) {
+                super(itemView);
+                mView = itemView;
+                price = (TextView) itemView.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.price);
+                ratingbar = (ScaleRatingBar) itemView.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.ratingbar);
+                discount = (TextView) itemView.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.discount);
+                fav1 = (ImageView)itemView.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.fav1);
+                fav2 = (ImageView)itemView.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.fav2);
+                }
+                public void  setTitle(String t){
+                TextView title = (TextView) itemView.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.Title);
+                title.setText(t); }
+                public void setImage(String i, Context context){
+                ImageView image = (ImageView) itemView.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.Images);
+                Picasso.with(context).load(i).into(image); }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+}

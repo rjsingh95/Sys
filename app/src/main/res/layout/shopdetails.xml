@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/cattextcolour">
+
+    <com.supplyingyourservice.ranjeet.singh.sys.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:background="@color/cattextcolour"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cattextcolour">
+
+                <com.supplyingyourservice.ranjeet.singh.sys.SliderLayout
+                    android:id="@+id/shopslider"
+                    style="@style/AlertDialog.AppCompat.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="80dp"
+
+                    android:background="#fff">
+
+                </com.supplyingyourservice.ranjeet.singh.sys.SliderLayout>
+
+
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    app:cardBackgroundColor="#00000000">
+
+                    <ImageView
+                        android:layout_height="match_parent"
+                        android:layout_width="330dp"
+                        android:id="@+id/imageView1"
+                        android:src="@drawable/top_rect"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true">
+                    </ImageView>
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="330dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="bottom|center" />
+
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:background="@drawable/bottom_rect"
+                android:elevation="4dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:tag="sticky">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <customfonts.MyTextView_Roboto_Black
+                            android:id="@+id/pricetype"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:text="Price"
+                            android:textColor="@color/colortext"
+                            android:textSize="16dp" />
+
+                        <customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/tvp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:text="000"
+                            android:textColor="@color/colortext"
+                            android:textSize="16dp" />
+
+                        <customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:text="to"
+                            android:textColor="@color/colortext"
+                            android:textSize="16dp"
+                            android:visibility="invisible" />
+
+                        <customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/tvp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="14dp"
+                            android:text="1000"
+                            android:textColor="@color/colortext"
+                            android:textSize="16dp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="2dp"
+
+
+                    android:layout_marginBottom="10dp"
+
+                    android:elevation="5dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/buy"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:background="@drawable/oneside_roundrect"
+                        android:gravity="center"
+                        android:text="GET"
+                        android:textColor="@color/White" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shadow_down">
+
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llDistance"
+                    android:layout_width="0dp"
+                    android:background="@color/cattextcolour"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:padding="11dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle"
+                        android:id="@+id/send"
+                        android:elevation="4dp"
+                        android:src="@drawable/messages"/>
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/tvDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Message"
+                        android:textColor="#aeb4c1"
+                        android:textSize="11.1dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cattextcolour"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle"
+                        android:elevation="4dp"
+                        android:id="@+id/shoploc"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_map" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Map"
+                        android:textColor="#adb3c0"
+                        android:textSize="11.1dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llreview"
+                    android:layout_width="0dp"
+                    android:background="@color/cattextcolour"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:padding="10dp"
+                        android:layout_width="45dp"
+                        android:id="@+id/dir"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle"
+                        android:elevation="4dp"
+                        android:src="@drawable/navigation" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/myTextView_Roboto_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Directions"
+                        android:textColor="#adb3c0"
+                        android:textSize="11.1dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llAddPhotos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cattextcolour"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:padding="10dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:id="@+id/call"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle"
+                        android:elevation="4dp"
+                        android:src="@drawable/telephone" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="More"
+                        android:textColor="#adb3c0"
+                        android:textSize="11.1dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cattextcolour"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <customfonts.MyTextView_Roboto_Bold
+                        android:id="@+id/shoptitle"
+                       android:layout_centerHorizontal="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textSize="18dp"
+
+                        android:text="Shop Name" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+
+                    android:background="@drawable/bottom_rect"
+
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:tag="sticky">
+
+                    <customfonts.MyTextView_Roboto_Regular
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="5dp"
+                        android:text="Shop Address"
+                        android:textColor="@color/Tex"
+                        android:textSize="16dp" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/shop_addresss"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="6dp"
+                        android:letterSpacing="0.035"
+                        android:text="Address"
+                        android:textColor="#606674"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bottom_rect"
+                    android:layout_marginTop="5dp"
+
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:tag="sticky">
+
+                    <customfonts.MyTextView_Roboto_Regular
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="5dp"
+                        android:text="Timmings"
+                        android:textColor="@color/Tex"
+                        android:textSize="16dp" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/timmings"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="6dp"
+                        android:letterSpacing="0.035"
+                        android:text="Timmings"
+                        android:textColor="#606674"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bottom_rect"
+                    android:layout_marginTop="5dp"
+
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="30dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:tag="sticky">
+
+                    <customfonts.MyTextView_Roboto_Regular
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:layout_marginLeft="5dp"
+                        android:text="Details"
+                        android:textColor="@color/Tex"
+                        android:textSize="16dp" />
+
+                    <customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/detailstv"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="60dp"
+                        android:layout_marginTop="6dp"
+                        android:letterSpacing="0.035"
+                        android:text="@string/shop_details"
+                        android:textColor="#606674"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.supplyingyourservice.ranjeet.singh.sys.StickyScrollView>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+            <customfonts.Button_Roboto_Medium
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:id="@+id/delivery"
+
+                android:layout_marginBottom="5dp"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+
+
+
+
+                android:layout_width="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:text="Ask for Delivery"
+
+                android:textColor="@color/Tex"
+                android:textSize="12dp"
+
+
+
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/round_rectangle"
+                android:padding="15dp"
+                android:layout_centerHorizontal="true"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/rel"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/card"
+                android:alpha=".8"
+                android:background="@color/transparentBlack"
+                android:visibility="visible"
+
+
+                android:layout_height="match_parent">
+            </RelativeLayout>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/productsrv"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/photo_view"
+                android:layout_width="match_parent"
+                android:layout_height="378dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="80dp"
+                android:scaleType="fitCenter" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
