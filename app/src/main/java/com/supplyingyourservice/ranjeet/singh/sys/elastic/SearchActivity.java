@@ -59,7 +59,7 @@ import java.util.List;
 
 import com.supplyingyourservice.ranjeet.singh.sys.all_cateogories;
 import com.supplyingyourservice.ranjeet.singh.sys.brand;
-import com.supplyingyourservice.ranjeet.singh.sys.category;
+import com.supplyingyourservice.ranjeet.singh.sys.model.category;
 import okhttp3.Credentials;
 
 import retrofit2.Call;

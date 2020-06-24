@@ -34,30 +34,15 @@
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>
 
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name" />
-        <activity
-            android:name="com.facebook.CustomTabActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="@string/fb_login_protocol_scheme" />
-            </intent-filter>
-        </activity>
+
 
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ChatActivity" />
-        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.MainActivity" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ChatsFragment" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.placeorder" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_cateogories"/>
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_brands"/>
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.products_list"/>
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.Addshop"/>
-        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.WatchListFragment" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.editinfo" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ProductDetailActivity" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.Search_shops"
@@ -95,10 +80,7 @@
             android:name="com.supplyingyourservice.ranjeet.singh.sys.MapsActivity2"
             android:label="@string/title_activity_maps2"></activity>
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.placeorder_delivery" />
-        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.orders" />
-
-        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.news_detail" />
-        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.offers" />
+         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.news_detail" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.shop_loc" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.shop_directions" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.product_confirmation" />
@@ -116,6 +98,7 @@
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.getbooks" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.customer_loc" />
         <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.mybooks" />
+        <activity android:name=".Home.MainActivity" />
 
     </application>
 

@@ -19,12 +19,13 @@ package com.supplyingyourservice.ranjeet.singh.sys;
     import com.google.firebase.database.DatabaseReference;
     import com.google.firebase.database.FirebaseDatabase;
     import com.google.firebase.database.ValueEventListener;
+        import com.supplyingyourservice.ranjeet.singh.sys.Home.MainActivity;
 
 
 public class SplashActivity extends Activity {
 
     // Splash screen timer
-    private static int SPLASH_TIME_OUT = 5000;
+    private static int SPLASH_TIME_OUT = 100;
 
 
     @Override

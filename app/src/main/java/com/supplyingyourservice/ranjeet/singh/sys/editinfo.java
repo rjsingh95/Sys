@@ -31,6 +31,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+import com.supplyingyourservice.ranjeet.singh.sys.Home.Fragment.DashboardFragment;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -217,7 +218,7 @@ maddphoto=(CircleImageView)findViewById(com.supplyingyourservice.ranjeet.singh.s
                     myref.child("username").setValue(username).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            Intent productdetailsintent = new Intent(editinfo.this, MainActivity.class);
+                            Intent productdetailsintent = new Intent(editinfo.this, DashboardFragment.class);
                             startActivity(productdetailsintent);
                             Toast.makeText(editinfo.this, "Saved", Toast.LENGTH_SHORT).show();
                         }
@@ -234,7 +235,7 @@ maddphoto=(CircleImageView)findViewById(com.supplyingyourservice.ranjeet.singh.s
                     }
                 }}else {
 
-                        Intent productdetailsintent = new Intent(editinfo.this, MainActivity.class);
+                        Intent productdetailsintent = new Intent(editinfo.this, DashboardFragment.class);
                         startActivity(productdetailsintent);
                         Toast.makeText(editinfo.this, "Saved", Toast.LENGTH_SHORT).show();
                     }

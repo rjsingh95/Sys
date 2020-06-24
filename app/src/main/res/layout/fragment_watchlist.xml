@@ -35,6 +35,5 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
 
-    <include layout="@layout/layout_bottom_navigation_view"
-        android:id="@+id/bot"/>
+
 </RelativeLayout>

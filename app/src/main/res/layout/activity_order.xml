@@ -19,7 +19,7 @@
     android:layout_below="@+id/toolbar">
 
 
-    <com.supplyingyourservice.ranjeet.singh.sys.ExpandableHeightListView
+    <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/listview"
         android:layout_width="match_parent"
@@ -33,6 +33,5 @@
 
 </ScrollView>
 
-    <include layout="@layout/layout_bottom_navigation_view"/>
 
 </RelativeLayout>

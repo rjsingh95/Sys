@@ -1,0 +1,548 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.supplyingyourservice.ranjeet.singh.sys"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CALL_PHONE" />
+11-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:5:5-69
+11-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:5:22-66
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:6:5-67
+12-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:7:5-79
+13-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:8:5-81
+14-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:9:5-80
+15-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:9:22-77
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:10:5-65
+16-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:10:22-62
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:9:5-80
+17-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:9:22-77
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:13:5-14:11
+18-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:13:22-78
+19
+20    <!-- Include required permissions for Google Maps API to run. -->
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->[com.google.android.gms:play-services-maps:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/246aa0d1fcddb01be7fdac6300467f19/jetified-play-services-maps-11.4.0/AndroidManifest.xml:19:5-78
+21-->[com.google.android.gms:play-services-maps:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/246aa0d1fcddb01be7fdac6300467f19/jetified-play-services-maps-11.4.0/AndroidManifest.xml:19:22-76
+22
+23    <uses-feature
+23-->[com.google.android.gms:play-services-maps:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/246aa0d1fcddb01be7fdac6300467f19/jetified-play-services-maps-11.4.0/AndroidManifest.xml:21:5-77
+24        android:glEsVersion="0x00020000"
+24-->[com.google.android.gms:play-services-maps:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/246aa0d1fcddb01be7fdac6300467f19/jetified-play-services-maps-11.4.0/AndroidManifest.xml:21:19-51
+25        android:required="true" />
+25-->[com.google.android.gms:play-services-maps:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/246aa0d1fcddb01be7fdac6300467f19/jetified-play-services-maps-11.4.0/AndroidManifest.xml:21:52-75
+26
+27    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Permissions required for GCM -->
+27-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:22:5-67
+27-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:22:22-65
+28    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+28-->[com.google.android.gms:play-services-gcm:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/609dafebbdfa4f01247c5944fd74a501/jetified-play-services-gcm-11.4.0/AndroidManifest.xml:20:5-81
+28-->[com.google.android.gms:play-services-gcm:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/609dafebbdfa4f01247c5944fd74a501/jetified-play-services-gcm-11.4.0/AndroidManifest.xml:20:22-79
+29
+30    <permission
+30-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:24:5-109
+31        android:name="com.supplyingyourservice.ranjeet.singh.sys.permission.C2D_MESSAGE"
+31-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:24:17-71
+32        android:protectionLevel="signature" />
+32-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:24:72-107
+33
+34    <uses-permission android:name="com.supplyingyourservice.ranjeet.singh.sys.permission.C2D_MESSAGE" />
+34-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:26:5-78
+34-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:26:22-76
+35
+36    <application
+36-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:16:5-106:19
+37        android:name="com.supplyingyourservice.ranjeet.singh.sys.commonloc.commomloc"
+37-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:17:9-86
+38        android:allowBackup="true"
+38-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:18:9-35
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.3.0-alpha02] /home/ranjeet/gradle/caches/transforms-2/files-2.1/53f12685b8c8be60478caeef9534e7a3/core-1.3.0-alpha02/AndroidManifest.xml:24:18-86
+40        android:debuggable="true"
+41        android:icon="@mipmap/ic_launcher"
+41-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:19:9-43
+42        android:label="@string/app_name"
+42-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:20:9-41
+43        android:roundIcon="@mipmap/ic_launcher"
+43-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:21:9-48
+44        android:supportsRtl="true"
+44-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:22:9-35
+45        android:testOnly="true"
+46        android:theme="@style/AppTheme" >
+46-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:23:9-40
+47        <activity
+47-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:25:9-33:20
+48            android:name="com.supplyingyourservice.ranjeet.singh.sys.SplashActivity"
+48-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:26:13-85
+49            android:screenOrientation="fullSensor" >
+49-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:27:13-51
+50            <intent-filter>
+50-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:28:13-32:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:29:17-69
+51-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:29:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:31:17-77
+53-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:31:27-74
+54            </intent-filter>
+55        </activity>
+56
+57        <meta-data
+57-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:34:9-35:54
+58            android:name="com.facebook.sdk.ApplicationId"
+58-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:34:20-65
+59            android:value="@string/facebook_app_id" />
+59-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:35:13-52
+60
+61        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ChatActivity" />
+61-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:39:9-92
+61-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:39:19-89
+62        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ChatsFragment" />
+62-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:40:9-93
+62-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:40:19-90
+63        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.placeorder" />
+63-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:41:9-90
+63-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:41:19-87
+64        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_cateogories" />
+64-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:42:9-94
+64-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:42:19-92
+65        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_brands" />
+65-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:43:9-89
+65-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:43:19-87
+66        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.products_list" />
+66-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:44:9-92
+66-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:44:19-90
+67        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.Addshop" />
+67-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:45:9-86
+67-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:45:19-84
+68        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.editinfo" />
+68-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:46:9-88
+68-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:46:19-85
+69        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.ProductDetailActivity" />
+69-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:47:9-101
+69-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:47:19-98
+70        <activity
+70-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:48:9-49:53
+71            android:name="com.supplyingyourservice.ranjeet.singh.sys.Search_shops"
+71-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:48:19-89
+72            android:screenOrientation="fullSensor" />
+72-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:49:13-51
+73        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.SignIn" />
+73-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:50:9-86
+73-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:50:19-83
+74        <activity
+74-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:51:9-52:53
+75            android:name="com.supplyingyourservice.ranjeet.singh.sys.elastic.SearchActivity"
+75-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:51:19-99
+76            android:screenOrientation="fullSensor" />
+76-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:52:13-51
+77        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.commonloc.addcloc" />
+77-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:53:9-97
+77-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:53:19-94
+78        <activity
+78-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:54:9-56:59
+79            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+79-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:55:13-76
+80            android:theme="@style/Base.Theme.AppCompat" />
+80-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:56:13-56
+81        <!--
+82             The API key for Google Maps-based APIs is defined as a string resource.
+83             (See the file "res/values/google_maps_api.xml").
+84             Note that the API key is linked to the encryption key used to sign the APK.
+85             You need a different API key for each encryption key, including the release key that is used to
+86             sign the APK for publishing.
+87             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+88        -->
+89        <meta-data
+89-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:65:9-67:55
+90            android:name="com.google.android.geo.API_KEY"
+90-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:66:13-58
+91            android:value="@string/google_maps_key" />
+91-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:67:13-52
+92        <meta-data
+92-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:68:9-70:57
+93            android:name="preloaded_fonts"
+93-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:69:13-43
+94            android:resource="@array/preloaded_fonts" />
+94-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:70:13-54
+95
+96        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.shopdetails" />
+96-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:72:9-91
+96-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:72:19-88
+97        <activity
+97-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:73:9-75:63
+98            android:name="com.supplyingyourservice.ranjeet.singh.sys.shop_map"
+98-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:74:13-79
+99            android:label="@string/title_activity_shop_map" />
+99-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:75:13-60
+100        <activity
+100-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:76:9-78:59
+101            android:name="com.supplyingyourservice.ranjeet.singh.sys.MapsActivity"
+101-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:77:13-83
+102            android:label="@string/title_activity_maps" />
+102-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:78:13-56
+103        <activity
+103-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:79:9-81:69
+104            android:name="com.supplyingyourservice.ranjeet.singh.sys.MapsActivity2"
+104-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:80:13-84
+105            android:label="@string/title_activity_maps2" />
+105-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:81:13-57
+106        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.placeorder_delivery" />
+106-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:82:9-99
+106-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:82:19-96
+107        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.Home.Fragment.ordersFragment" />
+107-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:83:9-108
+107-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:83:19-105
+108        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.news_detail" />
+108-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:85:9-91
+108-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:85:19-88
+109        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.Home.Fragment.offersFragment" />
+109-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:86:9-108
+109-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:86:19-105
+110        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.shop_loc" />
+110-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:87:9-88
+110-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:87:19-85
+111        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.shop_directions" />
+111-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:88:9-95
+111-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:88:19-92
+112        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.product_confirmation" />
+112-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:89:9-100
+112-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:89:19-97
+113        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.list_items" />
+113-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:90:9-90
+113-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:90:19-87
+114        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.browser" />
+114-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:92:9-87
+114-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:92:19-84
+115        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_type_category" />
+115-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:93:9-97
+115-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:93:19-94
+116        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.book_search" />
+116-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:94:9-97
+116-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:94:19-94
+117        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.bookstore" />
+117-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:95:9-95
+117-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:95:19-92
+118        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.addabook" />
+118-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:96:9-94
+118-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:96:19-91
+119        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.bookdetail" />
+119-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:97:9-96
+119-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:97:19-93
+120        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.sell_book" />
+120-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:98:9-95
+120-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:98:19-92
+121        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.all_books" />
+121-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:99:9-95
+121-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:99:19-92
+122        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.all_products" />
+122-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:100:9-92
+122-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:100:19-89
+123        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.getbooks" />
+123-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:101:9-94
+123-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:101:19-91
+124        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.customer_loc" />
+124-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:102:9-98
+124-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:102:19-95
+125        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.books.mybooks" />
+125-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:103:9-93
+125-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:103:19-90
+126        <activity android:name="com.supplyingyourservice.ranjeet.singh.sys.Home.MainActivity" />
+126-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:104:9-55
+126-->/home/ranjeet/Desktop/brackat-androidx/app/src/main/AndroidManifest.xml:104:19-52
+127
+128        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" />
+128-->[com.google.android.gms:play-services-cast-framework:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e4019366ccdc014259742770ba0f8443/jetified-play-services-cast-framework-11.4.0/AndroidManifest.xml:5:9-99
+128-->[com.google.android.gms:play-services-cast-framework:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e4019366ccdc014259742770ba0f8443/jetified-play-services-cast-framework-11.4.0/AndroidManifest.xml:5:19-97
+129
+130        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" />
+130-->[com.google.android.gms:play-services-cast-framework:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e4019366ccdc014259742770ba0f8443/jetified-play-services-cast-framework-11.4.0/AndroidManifest.xml:6:9-103
+130-->[com.google.android.gms:play-services-cast-framework:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e4019366ccdc014259742770ba0f8443/jetified-play-services-cast-framework-11.4.0/AndroidManifest.xml:6:18-101
+131        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" />
+131-->[com.google.android.gms:play-services-cast-framework:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e4019366ccdc014259742770ba0f8443/jetified-play-services-cast-framework-11.4.0/AndroidManifest.xml:7:9-92
+131-->[com.google.android.gms:play-services-cast-framework:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e4019366ccdc014259742770ba0f8443/jetified-play-services-cast-framework-11.4.0/AndroidManifest.xml:7:18-90
+132
+133        <meta-data
+133-->[com.firebaseui:firebase-ui-database:2.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/a462c153a97a321a86a3a8ac209f0592/jetified-firebase-ui-database-2.4.0/AndroidManifest.xml:14:9-16:69
+134            android:name="com.google.android.gms.version"
+134-->[com.firebaseui:firebase-ui-database:2.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/a462c153a97a321a86a3a8ac209f0592/jetified-firebase-ui-database-2.4.0/AndroidManifest.xml:15:13-58
+135            android:value="@integer/google_play_services_version" />
+135-->[com.firebaseui:firebase-ui-database:2.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/a462c153a97a321a86a3a8ac209f0592/jetified-firebase-ui-database-2.4.0/AndroidManifest.xml:16:13-66
+136        <!--
+137 FirebaseMessagingService performs security checks at runtime,
+138             no need for explicit permissions despite exported="true"
+139        -->
+140        <service
+140-->[com.google.firebase:firebase-messaging:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/2577bd64810bde56986f6dbb3228aed1/jetified-firebase-messaging-11.4.0/AndroidManifest.xml:23:9-27:19
+141            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+141-->[com.google.firebase:firebase-messaging:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/2577bd64810bde56986f6dbb3228aed1/jetified-firebase-messaging-11.4.0/AndroidManifest.xml:23:18-87
+142            android:exported="true" >
+142-->[com.google.firebase:firebase-messaging:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/2577bd64810bde56986f6dbb3228aed1/jetified-firebase-messaging-11.4.0/AndroidManifest.xml:23:88-111
+143            <intent-filter android:priority="-500" >
+143-->[com.google.firebase:firebase-messaging:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/2577bd64810bde56986f6dbb3228aed1/jetified-firebase-messaging-11.4.0/AndroidManifest.xml:24:13-26:29
+143-->[com.google.firebase:firebase-messaging:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/2577bd64810bde56986f6dbb3228aed1/jetified-firebase-messaging-11.4.0/AndroidManifest.xml:24:28-51
+144                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+144-->[com.google.firebase:firebase-messaging:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/2577bd64810bde56986f6dbb3228aed1/jetified-firebase-messaging-11.4.0/AndroidManifest.xml:25:17-77
+144-->[com.google.firebase:firebase-messaging:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/2577bd64810bde56986f6dbb3228aed1/jetified-firebase-messaging-11.4.0/AndroidManifest.xml:25:25-75
+145            </intent-filter>
+146        </service>
+147
+148        <activity
+148-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:20:9-189
+149            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+149-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:20:19-68
+150            android:excludeFromRecents="true"
+150-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:20:129-162
+151            android:exported="false"
+151-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:20:163-187
+152            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+152-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:20:69-128
+153        <!--
+154Service handling Google Sign-In user revocation. For apps that do not integrate with
+155            Google Sign-In, this service will never be started.
+156        -->
+157        <service
+157-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:24:9-184
+158            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+158-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:24:18-63
+159            android:exported="true"
+159-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:24:64-87
+160            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+160-->[com.google.android.gms:play-services-auth:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/69cfe0ceed17fd5c24eb8af1b227ff96/jetified-play-services-auth-11.4.0/AndroidManifest.xml:24:88-182
+161        <service
+161-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:24:9-134
+162            android:name="com.google.android.gms.tagmanager.TagManagerService"
+162-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:24:18-84
+163            android:enabled="true"
+163-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:24:110-132
+164            android:exported="false" />
+164-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:24:85-109
+165
+166        <activity
+166-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:25:9-32:20
+167            android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity"
+167-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:25:19-93
+168            android:exported="true"
+168-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:25:94-117
+169            android:noHistory="true" > <!-- optional, removes the previewActivity from the activity stack. -->
+169-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:25:118-142
+170            <intent-filter>
+170-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:26:13-31:29
+171                <data android:scheme="tagmanager.c.com.supplyingyourservice.ranjeet.singh.sys" />
+171-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:27:17-71
+171-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:27:23-69
+172
+173                <action android:name="android.intent.action.VIEW" />
+173-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:28:17-68
+173-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:28:25-66
+174
+175                <category android:name="android.intent.category.DEFAULT" />
+175-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:29:17-75
+175-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:29:27-73
+176                <category android:name="android.intent.category.BROWSABLE" />
+176-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:30:17-77
+176-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:30:27-75
+177            </intent-filter>
+178        </activity>
+179
+180        <receiver
+180-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:25:7-26:18
+181            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+181-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:25:17-89
+182            android:enabled="true"
+182-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:25:90-112
+183            android:exported="false" >
+183-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:25:113-137
+184        </receiver>
+185        <receiver
+185-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:27:7-31:18
+186            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+186-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:27:17-104
+187            android:enabled="true"
+187-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:27:162-184
+188            android:exported="true"
+188-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:27:185-208
+189            android:permission="android.permission.INSTALL_PACKAGES" >
+189-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:27:105-161
+190            <intent-filter>
+190-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:28:11-30:27
+191                <action android:name="com.android.vending.INSTALL_REFERRER" />
+191-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:29:15-76
+191-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:29:23-74
+192            </intent-filter>
+193        </receiver>
+194
+195        <service
+195-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:32:7-137
+196            android:name="com.google.android.gms.measurement.AppMeasurementService"
+196-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:32:16-87
+197            android:enabled="true"
+197-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:32:88-110
+198            android:exported="false" />
+198-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:32:111-135
+199        <service
+199-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:33:7-197
+200            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+200-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:33:16-90
+201            android:enabled="true"
+201-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:33:148-170
+202            android:exported="false"
+202-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:33:171-195
+203            android:permission="android.permission.BIND_JOB_SERVICE" />
+203-->[com.google.firebase:firebase-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/7c1efa7db712659f2af454d799a60d4b/jetified-firebase-analytics-11.4.0/AndroidManifest.xml:33:91-147
+204
+205        <receiver
+205-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:27:9-28:20
+206            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+206-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:27:19-84
+207            android:enabled="true"
+207-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:27:85-107
+208            android:exported="false" >
+208-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:27:108-132
+209        </receiver>
+210
+211        <service
+211-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:29:9-132
+212            android:name="com.google.android.gms.analytics.AnalyticsService"
+212-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:29:18-82
+213            android:enabled="true"
+213-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:29:83-105
+214            android:exported="false" />
+214-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:29:106-130
+215        <service
+215-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:30:9-192
+216            android:name="com.google.android.gms.analytics.AnalyticsJobService"
+216-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:30:18-85
+217            android:enabled="true"
+217-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:30:143-165
+218            android:exported="false"
+218-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:30:166-190
+219            android:permission="android.permission.BIND_JOB_SERVICE" />
+219-->[com.google.android.gms:play-services-analytics:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/335920958e5dd1e10f9fb12b467f916f/jetified-play-services-analytics-11.4.0/AndroidManifest.xml:30:86-142
+220
+221        <activity
+221-->[com.google.android.gms:play-services-appinvite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/b4888c1ef000871b2981c76ea19e663a/jetified-play-services-appinvite-11.4.0/AndroidManifest.xml:20:9-25:20
+222            android:name="com.google.android.gms.appinvite.PreviewActivity"
+222-->[com.google.android.gms:play-services-appinvite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/b4888c1ef000871b2981c76ea19e663a/jetified-play-services-appinvite-11.4.0/AndroidManifest.xml:20:19-50
+223            android:exported="true"
+223-->[com.google.android.gms:play-services-appinvite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/b4888c1ef000871b2981c76ea19e663a/jetified-play-services-appinvite-11.4.0/AndroidManifest.xml:20:51-74
+224            android:theme="@style/Theme.AppInvite.Preview" >
+224-->[com.google.android.gms:play-services-appinvite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/b4888c1ef000871b2981c76ea19e663a/jetified-play-services-appinvite-11.4.0/AndroidManifest.xml:20:75-121
+225            <intent-filter>
+225-->[com.google.android.gms:play-services-appinvite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/b4888c1ef000871b2981c76ea19e663a/jetified-play-services-appinvite-11.4.0/AndroidManifest.xml:21:13-24:29
+226                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW" />
+226-->[com.google.android.gms:play-services-appinvite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/b4888c1ef000871b2981c76ea19e663a/jetified-play-services-appinvite-11.4.0/AndroidManifest.xml:22:17-89
+226-->[com.google.android.gms:play-services-appinvite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/b4888c1ef000871b2981c76ea19e663a/jetified-play-services-appinvite-11.4.0/AndroidManifest.xml:22:25-87
+227
+228                <category android:name="android.intent.category.DEFAULT" />
+228-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:29:17-75
+228-->[com.google.android.gms:play-services-tagmanager-api:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/5d4c8afb16652ac9a585af1ff2438f6d/jetified-play-services-tagmanager-api-11.4.0/AndroidManifest.xml:29:27-73
+229            </intent-filter>
+230        </activity>
+231        <activity
+231-->[com.google.android.gms:play-services-base:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/4cd17f10343f3128ef89816a653f45e8/jetified-play-services-base-11.4.0/AndroidManifest.xml:19:9-172
+232            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+232-->[com.google.android.gms:play-services-base:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/4cd17f10343f3128ef89816a653f45e8/jetified-play-services-base-11.4.0/AndroidManifest.xml:19:19-85
+233            android:exported="false"
+233-->[com.google.android.gms:play-services-base:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/4cd17f10343f3128ef89816a653f45e8/jetified-play-services-base-11.4.0/AndroidManifest.xml:19:146-170
+234            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+234-->[com.google.android.gms:play-services-base:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/4cd17f10343f3128ef89816a653f45e8/jetified-play-services-base-11.4.0/AndroidManifest.xml:19:86-145
+235
+236        <receiver
+236-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:30:9-35:20
+237            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+237-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:30:19-84
+238            android:exported="true"
+238-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:30:85-108
+239            android:permission="com.google.android.c2dm.permission.SEND" >
+239-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:30:109-169
+240            <intent-filter>
+240-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:31:13-34:29
+241                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+241-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:32:17-80
+241-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:32:25-78
+242
+243                <category android:name="com.supplyingyourservice.ranjeet.singh.sys" />
+243-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:33:17-60
+243-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:33:27-58
+244            </intent-filter>
+245        </receiver>
+246        <!--
+247 Internal (not exported) receiver used by the app to start its own exported services
+248             without risk of being spoofed.
+249        -->
+250        <receiver
+250-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:39:9-119
+251            android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+251-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:39:19-92
+252            android:exported="false" />
+252-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:39:93-117
+253        <!--
+254 FirebaseInstanceIdService performs security checks at runtime,
+255             no need for explicit permissions despite exported="true"
+256        -->
+257        <service
+257-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:43:9-47:19
+258            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+258-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:43:18-82
+259            android:exported="true" >
+259-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:43:83-106
+260            <intent-filter android:priority="-500" >
+260-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:44:13-46:29
+260-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:44:28-51
+261                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+261-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:45:17-79
+261-->[com.google.firebase:firebase-iid:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/e31dee29732c1c23fc40cbc2e1443f13/jetified-firebase-iid-11.4.0/AndroidManifest.xml:45:25-77
+262            </intent-filter>
+263        </service>
+264
+265        <provider
+265-->[com.google.firebase:firebase-common:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/8a76009d99e51efaaf4e234017756c51/jetified-firebase-common-11.4.0/AndroidManifest.xml:6:9-194
+266            android:name="com.google.firebase.provider.FirebaseInitProvider"
+266-->[com.google.firebase:firebase-common:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/8a76009d99e51efaaf4e234017756c51/jetified-firebase-common-11.4.0/AndroidManifest.xml:6:79-143
+267            android:authorities="com.supplyingyourservice.ranjeet.singh.sys.firebaseinitprovider"
+267-->[com.google.firebase:firebase-common:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/8a76009d99e51efaaf4e234017756c51/jetified-firebase-common-11.4.0/AndroidManifest.xml:6:19-78
+268            android:exported="false"
+268-->[com.google.firebase:firebase-common:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/8a76009d99e51efaaf4e234017756c51/jetified-firebase-common-11.4.0/AndroidManifest.xml:6:144-168
+269            android:initOrder="100" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+269-->[com.google.firebase:firebase-common:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/8a76009d99e51efaaf4e234017756c51/jetified-firebase-common-11.4.0/AndroidManifest.xml:6:169-192
+270        <activity
+270-->[com.google.android.gms:play-services-ads-lite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/656d0a74d19af0aa53e4dc4b7436d819/jetified-play-services-ads-lite-11.4.0/AndroidManifest.xml:25:9-257
+271            android:name="com.google.android.gms.ads.AdActivity"
+271-->[com.google.android.gms:play-services-ads-lite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/656d0a74d19af0aa53e4dc4b7436d819/jetified-play-services-ads-lite-11.4.0/AndroidManifest.xml:25:19-71
+272            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+272-->[com.google.android.gms:play-services-ads-lite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/656d0a74d19af0aa53e4dc4b7436d819/jetified-play-services-ads-lite-11.4.0/AndroidManifest.xml:25:72-181
+273            android:exported="false"
+273-->[com.google.android.gms:play-services-ads-lite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/656d0a74d19af0aa53e4dc4b7436d819/jetified-play-services-ads-lite-11.4.0/AndroidManifest.xml:25:231-255
+274            android:theme="@android:style/Theme.Translucent" />
+274-->[com.google.android.gms:play-services-ads-lite:11.4.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/656d0a74d19af0aa53e4dc4b7436d819/jetified-play-services-ads-lite-11.4.0/AndroidManifest.xml:25:182-230
+275
+276        <provider
+276-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/f6087f90b0e2814e3ca2934145d6cd6d/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+277            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+277-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/f6087f90b0e2814e3ca2934145d6cd6d/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+278            android:authorities="com.supplyingyourservice.ranjeet.singh.sys.lifecycle-process"
+278-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/f6087f90b0e2814e3ca2934145d6cd6d/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+279            android:exported="false"
+279-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/f6087f90b0e2814e3ca2934145d6cd6d/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+280            android:multiprocess="true" />
+280-->[androidx.lifecycle:lifecycle-process:2.0.0] /home/ranjeet/gradle/caches/transforms-2/files-2.1/f6087f90b0e2814e3ca2934145d6cd6d/jetified-lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+281    </application>
+282
+283</manifest>

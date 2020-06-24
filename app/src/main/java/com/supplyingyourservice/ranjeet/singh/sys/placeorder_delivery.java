@@ -27,6 +27,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
+import com.supplyingyourservice.ranjeet.singh.sys.Home.Fragment.ordersFragment;
 
 import java.util.HashMap;
 
@@ -313,7 +314,7 @@ datbase=FirebaseDatabase.getInstance().getReference();
                                                 datbase.child("notifications").child(mpost_key).push().setValue(noti).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
-                                                        Intent productdetailsintent = new Intent(placeorder_delivery.this, orders.class);
+                                                        Intent productdetailsintent = new Intent(placeorder_delivery.this, ordersFragment.class);
                                                         startActivity(productdetailsintent);
                                                         finish();
                                                         placeorder_delivery.this.overridePendingTransition(R.anim.anim_slide_in_from_left, R.anim.fade_out);
@@ -388,7 +389,7 @@ datbase=FirebaseDatabase.getInstance().getReference();
                                                 datbase.child("notifications").child(mpost_key).push().setValue(noti).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
-                                                        Intent productdetailsintent = new Intent(placeorder_delivery.this, orders.class);
+                                                        Intent productdetailsintent = new Intent(placeorder_delivery.this, ordersFragment.class);
                                                         startActivity(productdetailsintent);
                                                         finish();
                                                         placeorder_delivery.this.overridePendingTransition(R.anim.anim_slide_in_from_left, R.anim.fade_out);

@@ -6,10 +6,10 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+
     tools:openDrawer="start"
     android:background="@color/cattextcolour"
-    tools:context=".MainActivity">
+ >
 
 
 
@@ -21,11 +21,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#f2f3f4">
-            <include layout="@layout/layout_bottom_navigation_view"/>
-            <com.supplyingyourservice.ranjeet.singh.sys.StickyScrollView
+             <com.supplyingyourservice.ranjeet.singh.sys.StickyScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="56dp"
+
                 android:scrollbars="none"
                 android:id="@+id/scroll"
                 >
@@ -138,7 +137,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/mobile"
+                            android:id="@+id/builder"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -162,12 +161,12 @@
                                 android:id="@+id/shirt1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Mobiles"
+                                android:text="Builder"
                                 android:layout_gravity="center"
-                                android:textSize="10dp"
+                                android:textSize="9sp"
                                 android:textColor="@color/Tex"
                                 android:layout_marginTop="10dp"
-                                android:letterSpacing="0.07">
+                                >
 
 
                             </customfonts.MyTextView>
@@ -188,7 +187,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/kitchen"
+                            android:id="@+id/haircut"
                             android:layout_weight="1"
 
                             android:layout_width="match_parent"
@@ -212,12 +211,12 @@
                                 android:id="@+id/slippers1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kitchen"
+                                android:text="Haircut At Home"
                                 android:layout_gravity="center"
-                                android:textSize="10dp"
+                                android:textSize="9sp"
                                 android:textColor="@color/Tex"
                                 android:layout_marginTop="10dp"
-                                android:letterSpacing="0.07"
+
                                 />
 
 
@@ -236,7 +235,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/computer"
+                            android:id="@+id/acrepair"
                             android:layout_weight="1"
 
                             android:layout_width="match_parent"
@@ -262,12 +261,12 @@
                                 android:id="@+id/shoes1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Computer"
+                                android:text="AC Service | Repair"
                                 android:layout_gravity="center"
-                                android:textSize="10dp"
+                                android:textSize="9sp"
                                 android:textColor="@color/Tex"
                                 android:layout_marginTop="10dp"
-                                android:letterSpacing="0.07"
+
                                 />
 
 
@@ -285,7 +284,7 @@
 
 
                         <LinearLayout
-                            android:id="@+id/homeapp"
+                            android:id="@+id/appliance"
                             android:layout_weight="1"
 
                             android:layout_width="match_parent"
@@ -310,13 +309,13 @@
                                 android:id="@+id/jeans1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Home App."
+                                android:text="Appliance Repair"
                                 android:layout_gravity="center"
-                                android:textSize="10dp"
+                                android:textSize="9sp"
                                 android:textColor="@color/Tex"
 
                                 android:layout_marginTop="10dp"
-                                android:letterSpacing="0.07"
+
                                 />
 
 
@@ -386,6 +385,7 @@
                         <LinearLayout
                             android:layout_weight="1"
                             android:layout_width="match_parent"
+                            android:id="@+id/carpenter"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
 
@@ -405,12 +405,12 @@
                                 android:layout_weight="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Carpenter"
+                                android:text="Plumbers | Carpenters"
                                 android:layout_gravity="center"
-                                android:textSize="10dp"
+                                android:textSize="9sp"
                                 android:textColor="@color/Tex"
                                 android:layout_marginTop="10dp"
-                                android:letterSpacing="0.07">
+                             >
 
 
                             </customfonts.MyTextView>
@@ -435,6 +435,7 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:id="@+id/painters"
                             android:orientation="vertical"
 
                             >
@@ -452,12 +453,12 @@
                                 android:layout_weight="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kitchen"
+                                android:text="Painters"
                                 android:layout_gravity="center"
-                                android:textSize="10dp"
+                                android:textSize="9sp"
                                 android:textColor="@color/Tex"
                                 android:layout_marginTop="10dp"
-                                android:letterSpacing="0.07"
+
                                 />
 
 
@@ -501,10 +502,10 @@
                                 android:layout_height="wrap_content"
                                 android:text="Computer Repair"
                                 android:layout_gravity="center"
-                                android:textSize="10dp"
+                                android:textSize="9sp"
                                 android:textColor="@color/Tex"
                                 android:layout_marginTop="10dp"
-                                android:letterSpacing="0.07"
+
                                 />
 
 
@@ -523,6 +524,7 @@
 
                         <LinearLayout
                             android:layout_weight="1"
+                            android:id="@+id/electricians"
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -544,13 +546,13 @@
                                 android:layout_weight="1"
                                  android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Home App."
+                                android:text="Electricians"
                                 android:layout_gravity="center"
-                                android:textSize="10dp"
+                                android:textSize="9sp"
                                 android:textColor="@color/Tex"
 
                                 android:layout_marginTop="10dp"
-                                android:letterSpacing="0.07"
+
                                 />
 
 
@@ -618,7 +620,7 @@
                         android:textColor="@color/Tex"
                         />
                     <!--********RECYCLERVIEW 1************-->
-                    <com.supplyingyourservice.ranjeet.singh.sys.ExpandableHeightListView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_below="@+id/popularproducts"
                         android:id="@+id/rv4"
                         android:orientation="horizontal"

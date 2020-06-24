@@ -27,6 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.supplyingyourservice.ranjeet.singh.sys.books.all_books;
+import com.supplyingyourservice.ranjeet.singh.sys.model.Acategory;
+import com.supplyingyourservice.ranjeet.singh.sys.model.category;
 
 public class all_brands extends AppCompatActivity {
     String key=null;
@@ -51,46 +53,41 @@ public class all_brands extends AppCompatActivity {
         EditText search=(EditText)findViewById(R.id.showbrand);
        search.setVisibility(View.GONE);
 
-        CardView All=(CardView) findViewById(R.id.message_single_layout);
-        All.setVisibility(View.VISIBLE);
+//        categories.add("Salon at Home");
+//        categories.add("Haircut At Home");
+//        categories.add("Cleaning & Pest Control");
+//        categories.add("AC Service & Repair");
+//        categories.add("Appliance Repair");
+//        categories.add("Electricians");
+//        categories.add("Plumbers & Carpenters");
+//        categories.add("Massage at Home");
+//        categories.add("Painters");
+//        categories.add("Disinfection");
+//        categories.add("Yoga & Fitness");
+
 
 
         final String recieve = getIntent().getStringExtra("category");
         mpost_key =recieve.toLowerCase();
-        if(recieve !=null){
-        All.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent productdetailsintent = new Intent (all_brands.this,all_books.class);
-                productdetailsintent.putExtra("category",recieve);
-                startActivity(productdetailsintent);
-
-            }
-        });
-
-
-
- }
 
 
 
         search.setHint(" Search Brands..");
-         mref = FirebaseDatabase.getInstance().getReference().child("brands");
+         mref = FirebaseDatabase.getInstance().getReference().child("categories");
 
         DatabaseReference myref = FirebaseDatabase.getInstance().getReference().child("brand");
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(all_brands.this, LinearLayoutManager.VERTICAL, false);
         rv2.setLayoutManager(mLayoutManager);
-        Query query = myref.orderByChild("b_c")
-                .startAt(mpost_key)
-                .endAt(mpost_key + "\uf8ff");
-        FirebaseRecyclerAdapter<brand, FriendsViewHolder> friendsRecyclerViewAdapter = new FirebaseRecyclerAdapter<brand, FriendsViewHolder>(
-                brand.class,
+        Query query = mref.orderByChild("type")
+                .equalTo(mpost_key);
+        FirebaseRecyclerAdapter<Acategory, FriendsViewHolder> friendsRecyclerViewAdapter = new FirebaseRecyclerAdapter<Acategory, FriendsViewHolder>(
+                Acategory.class,
                 R.layout.single_text_layout,
                 FriendsViewHolder.class,
                 query
         ) {
             @Override
-            protected void populateViewHolder(final FriendsViewHolder AllproductsViewHolder, final brand friends, int i) {
+            protected void populateViewHolder(final FriendsViewHolder AllproductsViewHolder, final Acategory friends, int i) {
 
                 final Handler handler = new Handler();
                 final String list_user_id = getRef(i).getKey();
@@ -116,13 +113,13 @@ public class all_brands extends AppCompatActivity {
                     progressrv.setVisibility(View.GONE);
                     rel.setVisibility(View.GONE);
                 }
-                AllproductsViewHolder.setTitle(friends.getBrand_show());
+                AllproductsViewHolder.setTitle(friends.getCategory());
 
                 AllproductsViewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent productdetailsintent = new Intent(all_brands.this, products_list.class);
-                        productdetailsintent.putExtra("product_name",mpost_key+friends.getBrand_show());
+                        productdetailsintent.putExtra("product_name",mpost_key+friends.getCategory());
                         startActivity(productdetailsintent);
 
 

@@ -22,7 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.supplyingyourservice.ranjeet.singh.sys.MainActivity;
+import com.supplyingyourservice.ranjeet.singh.sys.Home.Fragment.DashboardFragment;
+import com.supplyingyourservice.ranjeet.singh.sys.Home.MainActivity;
 import com.supplyingyourservice.ranjeet.singh.sys.R;
 
 public class addcloc extends AppCompatActivity  implements AdapterView.OnItemSelectedListener{
@@ -73,7 +74,7 @@ public class addcloc extends AppCompatActivity  implements AdapterView.OnItemSel
                       editor.putString("city", item);
                       editor.apply();
 
-                      Intent productdetailsintent = new Intent (addcloc.this,MainActivity.class);
+                      Intent productdetailsintent = new Intent (addcloc.this, MainActivity.class);
                       productdetailsintent.putExtra("city",item);
                       startActivity(productdetailsintent);
                       finish();
