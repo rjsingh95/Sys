@@ -55,6 +55,8 @@ import com.supplyingyourservice.ranjeet.singh.sys.SliderLayout;
 import com.supplyingyourservice.ranjeet.singh.sys.SmallBang;
 import com.supplyingyourservice.ranjeet.singh.sys.SmallBangListener;
 import com.supplyingyourservice.ranjeet.singh.sys.TrendingRecyclerViewAdapter;
+import com.supplyingyourservice.ranjeet.singh.sys.adapters.CategoryAdapter;
+import com.supplyingyourservice.ranjeet.singh.sys.adapters.CategoryAdapter2;
 import com.supplyingyourservice.ranjeet.singh.sys.addprod;
 import com.supplyingyourservice.ranjeet.singh.sys.all_brands;
 import com.supplyingyourservice.ranjeet.singh.sys.all_cateogories;
@@ -460,15 +462,16 @@ goggles.setOnClickListener(new OnClickListener() {
                     Picasso.with(requireContext()).load(dp).into(imag);
                 }
                 if(dataSnapshot.hasChild("new_message")){
-                    String dp= dataSnapshot.child("new_message").getValue().toString();
+                    String dp= dataSnapshot.child("new_mess" +
+                            "age").getValue().toString();
 
 
-
+                    if(root!=null){
 
                     if (dp.equals("new")) {
                         new QBadgeView(requireContext()).bindTarget(messagesb).setBadgeText("new").setBadgePadding(4, true).setBadgeTextSize(10, true).setGravityOffset(1, 1, true).setBadgeGravity(Gravity.TOP | Gravity.END);
 
-                    }
+                    }}
                 }
             }
 
@@ -557,7 +560,13 @@ goggles.setOnClickListener(new OnClickListener() {
         LayoutManager mLayoutManager1 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
         rv2.setLayoutManager(mLayoutManager1);
         rv2.setHasFixedSize(true);
+        ArrayList<aproduct> list8 = new ArrayList<>();
+        CategoryAdapter categoryAdapter = new CategoryAdapter(requireContext(), list8);
+        rv2.setAdapter(categoryAdapter);
 
+
+        CategoryAdapter2 categoryAdapter2 = new CategoryAdapter2(requireContext(), list8);
+        rv.setAdapter(categoryAdapter2);
 
         LayoutManager mLayoutManager5 = new LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false);
         rv4.setLayoutManager(mLayoutManager5);
@@ -631,28 +640,28 @@ return root;
         super.onStart();
         String s = ((commomloc) getActivity().getApplication()).getloc();
         mref= FirebaseDatabase.getInstance().getReference().child("products");
-
-        if(s!=null) {
-            myref2= FirebaseDatabase.getInstance().getReference().child("homerv").child(s).child("top");
-
-            homerv(rv4, myref2, mref);
-
-        }
-        if(s!=null){
-            myref = FirebaseDatabase.getInstance().getReference().child("in_city").child(s);
-
-            homerv(rv2,myref,mref);
-
-        }
-
-
-        if(s!=null) {
-
-            myref3 = FirebaseDatabase.getInstance().getReference().child("homerv").child(s).child("middle");
-
-            homerv(rv, myref3, mref);
-
-        }
+//
+//        if(s!=null) {
+//            myref2= FirebaseDatabase.getInstance().getReference().child("homerv").child(s).child("top");
+//
+//            homerv(rv4, myref2, mref);
+//
+//        }
+//        if(s!=null){
+//            myref = FirebaseDatabase.getInstance().getReference().child("in_city").child(s);
+//
+//            homerv(rv2,myref,mref);
+//
+//        }
+//
+//
+//        if(s!=null) {
+//
+//            myref3 = FirebaseDatabase.getInstance().getReference().child("homerv").child(s).child("middle");
+//
+//            homerv(rv, myref3, mref);
+//
+//        }
 
 
 

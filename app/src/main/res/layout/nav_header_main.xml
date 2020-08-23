@@ -15,7 +15,7 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        android:background="#c1c2c3">
+        android:background="@color/colorAccent">
 
 
 

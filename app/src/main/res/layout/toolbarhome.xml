@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    android:background="#f2f3f4"
+    android:background="@color/colorAccent"
     android:id="@+id/toolbar"
 
     android:layout_margin="0dp"

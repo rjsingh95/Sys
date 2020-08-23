@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+
+    android:layout_marginLeft="8dp"
+    app:cardCornerRadius="16dp"
+    android:layout_marginRight="8dp"
+
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/carpenterimagefull"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/black"
+            app:cardCornerRadius="30dp"
+
+            android:layout_marginTop="100dp"
+            android:alpha=".2"
+            android:layout_height="match_parent">
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:id="@+id/title"
+            android:textStyle="bold"
+
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="Get Electricity"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="8dp"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginBottom="10dp"
+
+            android:layout_below="@+id/title"
+            android:layout_marginTop="60dp"
+
+            android:elevation="4dp"
+            android:text="advantages of getting carpenter from sys is you can get your work done in shortest possible time advantages of getting carpenter from sys is you can get your work done in shortest possible time"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
