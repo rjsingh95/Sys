@@ -468,10 +468,11 @@ goggles.setOnClickListener(new OnClickListener() {
 
                     if(root!=null){
 
-                    if (dp.equals("new")) {
-                        new QBadgeView(requireContext()).bindTarget(messagesb).setBadgeText("new").setBadgePadding(4, true).setBadgeTextSize(10, true).setGravityOffset(1, 1, true).setBadgeGravity(Gravity.TOP | Gravity.END);
-
-                    }}
+//                    if (dp.equals("new")) {
+//                        new QBadgeView(requireContext()).bindTarget(messagesb).setBadgeText("new").setBadgePadding(4, true).setBadgeTextSize(10, true).setGravityOffset(1, 1, true).setBadgeGravity(Gravity.TOP | Gravity.END);
+//
+//                    }
+                    }
                 }
             }
 
@@ -588,7 +589,7 @@ goggles.setOnClickListener(new OnClickListener() {
                     if(!Bean2.contains(obj)){
                     Bean2.add(obj);}
                 }
-                baseAdapter2 = new BrandsRecyclerViewAdapter(requireContext(), Bean2);
+                baseAdapter2 = new BrandsRecyclerViewAdapter(getContext(), Bean2);
                 rv3.setAdapter(baseAdapter2);
             }
 
@@ -597,6 +598,7 @@ goggles.setOnClickListener(new OnClickListener() {
 
             }
         });
+
 if(mAuth.getCurrentUser()!=null) {
     DatabaseReference database = FirebaseDatabase.getInstance().getReference();
     database.child("delivery").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {

@@ -5,6 +5,7 @@
     <color name="darkblue">#3F51B5</color>
     <color name="colorAccent">#0BCEB0</color>
     <color name="cattextcolour">#f2f2f2</color>
+    <color name="activity_back">#f2f3f4</color>
 
     <color name="listtext">#ededfc</color>
     <color name="bglist">#ededfc</color>

@@ -36,7 +36,7 @@
 
 
             android:layout_centerVertical="true"
-            android:rotation="30"
+            android:rotation="20"
 
             android:src="@drawable/ic_notifications_24"
 
