@@ -48,7 +48,7 @@ import java.util.HashMap;
 public class ordersFragment extends Fragment {
 
 
-    private ExpandableHeightListView rv;
+    private RecyclerView rv;
     private DatabaseReference database;
     private FirebaseAuth mAuth;
     private static final int ACTIVITY_NUM = 2;
@@ -63,7 +63,7 @@ public class ordersFragment extends Fragment {
         toolbartitle.setText("ORDERS");
         mAuth = FirebaseAuth.getInstance();
 
-        rv = (ExpandableHeightListView) root.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.listview);
+        rv = (RecyclerView) root.findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.listview);
         rv.setLayoutManager(new LinearLayoutManager(requireContext()));
         database = FirebaseDatabase.getInstance().getReference();
 

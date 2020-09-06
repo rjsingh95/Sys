@@ -5,10 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
-
         android:layout_marginBottom="60dp"
         android:layout_height="match_parent"
         android:id="@+id/viewpager"/>
+
 
 
 

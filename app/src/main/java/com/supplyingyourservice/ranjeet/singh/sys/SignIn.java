@@ -37,7 +37,7 @@ public class SignIn extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener {
 
     private static final String TAG = "GoogleActivity";
-    private static final int RC_SIGN_IN = 9001;
+private static final int RC_SIGN_IN = 9001;
     private MyTextView gbutton;
     private FirebaseAuth mAuth;
     private GoogleApiClient mGoogleApiClient;
