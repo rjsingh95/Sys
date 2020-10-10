@@ -5,12 +5,33 @@ public class Acategory{
 	private String t_c;
 	private String category;
 	private String type;
+	private  String types;
+	private String categorys;
 	Acategory(){}
-	public Acategory(String c_t, String t_c, String category, String type) {
+
+	public Acategory(String c_t, String t_c, String category, String type, String types, String categorys) {
 		this.c_t = c_t;
 		this.t_c = t_c;
 		this.category = category;
 		this.type = type;
+		this.types = types;
+		this.categorys = categorys;
+	}
+
+	public String getTypes() {
+		return types;
+	}
+
+	public void setTypes(String types) {
+		this.types = types;
+	}
+
+	public String getCategorys() {
+		return categorys;
+	}
+
+	public void setCategorys(String categorys) {
+		this.categorys = categorys;
 	}
 
 	public String getC_t() {

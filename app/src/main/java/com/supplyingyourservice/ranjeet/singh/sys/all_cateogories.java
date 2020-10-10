@@ -108,6 +108,7 @@ public class all_cateogories extends AppCompatActivity {
                 AllproductsViewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        assert key != null;
                         Log.d("allcat",key);
 
                         Intent productdetailsintent = new Intent (all_cateogories.this,all_brands.class);

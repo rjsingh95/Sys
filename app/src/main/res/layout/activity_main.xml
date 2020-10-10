@@ -525,7 +525,6 @@
                         <LinearLayout
                             android:layout_weight="1"
                             android:id="@+id/electricians"
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"

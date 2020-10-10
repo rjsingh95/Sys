@@ -53,29 +53,16 @@ public class all_brands extends AppCompatActivity {
         EditText search=(EditText)findViewById(R.id.showbrand);
        search.setVisibility(View.GONE);
 
-//        categories.add("Salon at Home");
-//        categories.add("Haircut At Home");
-//        categories.add("Cleaning & Pest Control");
-//        categories.add("AC Service & Repair");
-//        categories.add("Appliance Repair");
-//        categories.add("Electricians");
-//        categories.add("Plumbers & Carpenters");
-//        categories.add("Massage at Home");
-//        categories.add("Painters");
-//        categories.add("Disinfection");
-//        categories.add("Yoga & Fitness");
-
-
 
         final String recieve = getIntent().getStringExtra("category");
         mpost_key =recieve.toLowerCase();
 
 
 
-        search.setHint(" Search Brands..");
+        search.setHint("Search Brands..");
          mref = FirebaseDatabase.getInstance().getReference().child("categories");
 
-        DatabaseReference myref = FirebaseDatabase.getInstance().getReference().child("brand");
+       // DatabaseReference myref = FirebaseDatabase.getInstance().getReference().child("brand");
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(all_brands.this, LinearLayoutManager.VERTICAL, false);
         rv2.setLayoutManager(mLayoutManager);
         Query query = mref.orderByChild("type")
@@ -103,7 +90,6 @@ public class all_brands extends AppCompatActivity {
                             rel.setVisibility(View.GONE);
                         }
 
-                        // Do something after 5s = 5000ms
 
                     }
                 }, 6500);
@@ -119,7 +105,7 @@ public class all_brands extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Intent productdetailsintent = new Intent(all_brands.this, products_list.class);
-                        productdetailsintent.putExtra("product_name",mpost_key+friends.getCategory());
+                        productdetailsintent.putExtra("product_name",mpost_key+friends.getT_c());
                         startActivity(productdetailsintent);
 
 

@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+import com.supplyingyourservice.ranjeet.singh.sys.model.Asubcategory;
 import com.willy.ratingbar.ScaleRatingBar;
 
 import java.util.ArrayList;
@@ -58,9 +59,9 @@ public class products_list extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         rv2 = (RecyclerView) findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.recyclerView);
-        mref = FirebaseDatabase.getInstance().getReference().child("products");
+        mref = FirebaseDatabase.getInstance().getReference().child("sub_categories");
 
-        mpost_key = getIntent().getStringExtra("product_name");
+        mpost_key = getIntent().getStringExtra("t_c");
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(products_list.this, LinearLayoutManager.VERTICAL, false);
         rv2.setLayoutManager(mLayoutManager);
@@ -69,15 +70,15 @@ public class products_list extends AppCompatActivity {
 
 
         progressrv=(ProgressBar)findViewById(R.id.progress);
-        Query query = mref.orderByChild("c_b")
+        Query query = mref.orderByChild("t_c")
                 .startAt(mpost_key.toLowerCase())
                 .endAt(mpost_key.toLowerCase() + "\uf8ff");
 
-        FirebaseRecyclerAdapter<aproduct, FriendsViewHolder> adapter = new FirebaseRecyclerAdapter<aproduct,FriendsViewHolder>(
-                aproduct.class, com.supplyingyourservice.ranjeet.singh.sys.R.layout.listview_productlist,FriendsViewHolder.class,query)
+        FirebaseRecyclerAdapter<Asubcategory, FriendsViewHolder> adapter = new FirebaseRecyclerAdapter<Asubcategory,FriendsViewHolder>(
+                Asubcategory.class, com.supplyingyourservice.ranjeet.singh.sys.R.layout.listview_productlist,FriendsViewHolder.class,query)
         {
             @Override
-            protected void populateViewHolder(final FriendsViewHolder viewHolder, final aproduct model, int position) {
+            protected void populateViewHolder(final FriendsViewHolder viewHolder, final Asubcategory model, int position) {
 
                 final String post_key = getRef(position).getKey();
 
@@ -96,96 +97,11 @@ public class products_list extends AppCompatActivity {
 
                     }
                 }, 2500);
-                if(post_key!=null){
-                    gaya=true;
-                    progressrv.setVisibility(View.GONE);
-                }
-
-                dref = FirebaseDatabase.getInstance().getReference();
-                viewHolder.price.setText("MRP "+model.getPrice());
-                viewHolder.ratingbar.setRating(model.getRating()/2);
-                dref.child("Likes").child(mAuth.getCurrentUser().getUid()).child(post_key);
-                dref.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.hasChild("like")) {
-                            viewHolder.fav2.setVisibility(View.VISIBLE);
-                            viewHolder.fav1.setVisibility(View.GONE);
-
-                        }
-
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-                viewHolder.mSmallBang = SmallBang.attach2Window(products_list.this);
 
 
-                viewHolder.fav1.setOnClickListener(new View.OnClickListener() {
-                    public DatabaseReference dref;
-
-                    @Override
-                    public void onClick(final View v) {
-
-                        dref = FirebaseDatabase.getInstance().getReference();
-                        dref.child("Likes").child(mAuth.getCurrentUser().getUid()).child(post_key).child("like").setValue("set").addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                viewHolder.fav2.setVisibility(View.VISIBLE);
-                                viewHolder.fav1.setVisibility(View.GONE);
-                                like(v);
-                            }
-                        });
 
 
-                    }
-
-                    public void like(View view) {
-                        viewHolder.fav2.setImageResource(com.supplyingyourservice.ranjeet.singh.sys.R.drawable.f4);
-                        viewHolder.mSmallBang.bang(view);
-                        viewHolder.mSmallBang.setmListener(new SmallBangListener() {
-                            @Override
-                            public void onAnimationStart() {
-
-                            }
-
-                            @Override
-                            public void onAnimationEnd() {
-
-                            }
-
-
-                        });
-                    }
-
-                });
-
-                viewHolder.fav2.setOnClickListener(new View.OnClickListener() {
-                    DatabaseReference dref;
-
-                    @Override
-                    public void onClick(View v) {
-
-                        dref = FirebaseDatabase.getInstance().getReference();
-                        dref.child("Likes").child(mAuth.getCurrentUser().getUid()).child(post_key).child("like").removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                viewHolder.fav2.setVisibility(View.GONE);
-                                viewHolder.fav1.setVisibility(View.VISIBLE);
-
-                            }
-                        });
-
-
-                    }
-                });
-
-
-                viewHolder.setTitle(model.getTitle());
-                viewHolder.setImage(model.getProductdp(), getApplicationContext());
+                viewHolder.setTitle(model.getSubCategories());
 
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
