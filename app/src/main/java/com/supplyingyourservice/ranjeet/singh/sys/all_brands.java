@@ -65,7 +65,7 @@ public class all_brands extends AppCompatActivity {
        // DatabaseReference myref = FirebaseDatabase.getInstance().getReference().child("brand");
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(all_brands.this, LinearLayoutManager.VERTICAL, false);
         rv2.setLayoutManager(mLayoutManager);
-        Query query = mref.orderByChild("type")
+        Query query = mref.orderByChild("types")
                 .equalTo(mpost_key);
         FirebaseRecyclerAdapter<Acategory, FriendsViewHolder> friendsRecyclerViewAdapter = new FirebaseRecyclerAdapter<Acategory, FriendsViewHolder>(
                 Acategory.class,
@@ -105,7 +105,7 @@ public class all_brands extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Intent productdetailsintent = new Intent(all_brands.this, products_list.class);
-                        productdetailsintent.putExtra("product_name",mpost_key+friends.getT_c());
+                        productdetailsintent.putExtra("t_c",friends.getT_c());
                         startActivity(productdetailsintent);
 
 

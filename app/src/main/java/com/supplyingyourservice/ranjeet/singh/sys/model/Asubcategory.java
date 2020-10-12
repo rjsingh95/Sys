@@ -2,11 +2,11 @@ package com.supplyingyourservice.ranjeet.singh.sys.model;
 
 public class Asubcategory {
 	private String categorys;
-	private String subCategories;
+	private String sub_categories;
 	private String types;
-	private String tCS;
-	private String cT;
-	private String tC;
+	private String t_cs;
+	private String c_t;
+	private String t_c;
 	private String category;
 	private String subCategoriess;
 	private String type;
@@ -16,8 +16,8 @@ public class Asubcategory {
 		return categorys;
 	}
 
-	public String getSubCategories(){
-		return subCategories;
+	public String getSub_categories(){
+		return sub_categories;
 	}
 
 	public String getTypes(){
@@ -25,15 +25,15 @@ public class Asubcategory {
 	}
 
 	public String getTCS(){
-		return tCS;
+		return t_cs;
 	}
 
 	public String getCT(){
-		return cT;
+		return c_t;
 	}
 
 	public String getTC(){
-		return tC;
+		return t_c;
 	}
 
 	public String getCategory(){

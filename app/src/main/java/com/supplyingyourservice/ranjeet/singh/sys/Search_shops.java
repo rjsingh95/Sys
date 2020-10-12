@@ -116,10 +116,10 @@ public class Search_shops extends AppCompatActivity {
         s = ((commomloc) this.getApplication()).getloc();
 
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-
-        mpost_key = getIntent().getStringExtra("product_id");
+mpost_key="sd";
+       // mpost_key = getIntent().getStringExtra("product_id");
 if(mpost_key!=null){
-        mproductdatabase = FirebaseDatabase.getInstance().getReference().child("in_city").child(s).child(mpost_key);}
+        mproductdatabase = FirebaseDatabase.getInstance().getReference().child("in_city");}
         else {
     finish();
         }
@@ -551,7 +551,7 @@ if(mode) {
     private void getClosestDriver(){
         s = ((commomloc) this.getApplication()).getloc();
 
-        DatabaseReference driverLocation = FirebaseDatabase.getInstance().getReference().child("in_city").child(s).child(mpost_key);
+        DatabaseReference driverLocation = FirebaseDatabase.getInstance().getReference().child("in_city");
 
         Log.d("checkingloc", String.valueOf(15));
 
@@ -634,7 +634,7 @@ if(mode) {
                     String city="location";
                     String profileImageUrl = "";
 
-                    if(dataSnapshot.hasChild("shop_name")){
+                    if(dataSnapshot.hasChild("phone_number")){
                         card.setVisibility(View.GONE);
 
                         name = dataSnapshot.child("shop_name").getValue().toString();

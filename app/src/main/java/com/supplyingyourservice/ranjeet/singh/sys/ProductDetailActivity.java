@@ -104,62 +104,62 @@ private MyTextView find;
         mtitle=(TextView) findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.product_title);
           mdetails= (TextView) findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.product_details);
             price=(TextView)findViewById(com.supplyingyourservice.ranjeet.singh.sys.R.id.price);
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("in_city").child(s).child(mpost_key);
-        database.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    find.setVisibility(View.VISIBLE);
-                    unvailable.setVisibility(View.GONE);
-
-                }else {
-                    find.setVisibility(View.GONE);
-                    unvailable.setVisibility(View.VISIBLE);
-
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                product_detail_sample obj=new product_detail_sample();
-                obj=dataSnapshot.getValue(product_detail_sample.class);
+//        DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("in_city").child(s).child(mpost_key);
+//        database.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                if(dataSnapshot.exists()){
+//                    find.setVisibility(View.VISIBLE);
+//                    unvailable.setVisibility(View.GONE);
+//
+//                }else {
+//                    find.setVisibility(View.GONE);
+//                    unvailable.setVisibility(View.VISIBLE);
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
 
-                price.setText("Rs "+obj.getPrice());
-                mdetails.setText(obj.getDescription());
-                mtitle.setText(obj.getTitle());
-
-                String o= String.valueOf(obj.getRating());
-                if(o != null){
-                ratingbar.setRating(obj.getRating()/2);
-
-                }
-                ratingbar=new ScaleRatingBar(ProductDetailActivity.this);
-                ratingbar.setClickable(false);
-                ratingbar.setIsIndicator(false);
-                ratingbar.setClickable(false);
-                ratingbar.setScrollable(false);
-                ratingbar.setClearRatingEnabled(false);
-
-
-
-
-                setGroup(obj.getImage(),obj.getImagee(),obj.getImageee());
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+//        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                product_detail_sample obj=new product_detail_sample();
+//                obj=dataSnapshot.getValue(product_detail_sample.class);
+//
+//
+//                price.setText("Rs "+obj.getPrice());
+//                mdetails.setText(obj.getDescription());
+//                mtitle.setText(obj.getTitle());
+//
+//                String o= String.valueOf(obj.getRating());
+//                if(o != null){
+//                ratingbar.setRating(obj.getRating()/2);
+//
+//                }
+//                ratingbar=new ScaleRatingBar(ProductDetailActivity.this);
+//                ratingbar.setClickable(false);
+//                ratingbar.setIsIndicator(false);
+//                ratingbar.setClickable(false);
+//                ratingbar.setScrollable(false);
+//                ratingbar.setClearRatingEnabled(false);
+//
+//
+//
+//
+//                setGroup(obj.getImage(),obj.getImagee(),obj.getImageee());
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
 
 find.setOnClickListener(new View.OnClickListener() {

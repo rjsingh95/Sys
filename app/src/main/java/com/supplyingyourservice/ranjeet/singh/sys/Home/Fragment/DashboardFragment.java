@@ -637,60 +637,7 @@ if(mAuth.getCurrentUser()!=null) {
 return root;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        String s = ((commomloc) getActivity().getApplication()).getloc();
-        mref= FirebaseDatabase.getInstance().getReference().child("products");
-//
-//        if(s!=null) {
-//            myref2= FirebaseDatabase.getInstance().getReference().child("homerv").child(s).child("top");
-//
-//            homerv(rv4, myref2, mref);
-//
-//        }
-//        if(s!=null){
-//            myref = FirebaseDatabase.getInstance().getReference().child("in_city").child(s);
-//
-//            homerv(rv2,myref,mref);
-//
-//        }
-//
-//
-//        if(s!=null) {
-//
-//            myref3 = FirebaseDatabase.getInstance().getReference().child("homerv").child(s).child("middle");
-//
-//            homerv(rv, myref3, mref);
-//
-//        }
 
-
-
-        mAuth=FirebaseAuth.getInstance();
-
-
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
-        if(currentUser == null){
-
-//
-            getActivity().finish();
-            startActivity(new Intent(requireContext(), SignIn.class));
-
-        } else {
-            DatabaseReference muserRef = FirebaseDatabase.getInstance().getReference().child("customers").child(mAuth.getCurrentUser().getUid());
-
-            muserRef.child("online").setValue("true");
-
-        }
-
-
-
-
-
-
-    }
 
 
    
